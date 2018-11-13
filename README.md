@@ -15,7 +15,7 @@ Connecting students and tutors quicker and more effectively at UC Davis.
 Using Firebase
 
 ## Testing Plan
-1. Create prototype without any backend support.
+1. Create prototype without any backend support.[aggie-tutor-prototype](https://pr.to/IN7MTL/)
 2. Demo prototype with friends. Get feedback on app aesthetics and user friendliness. 
 3. Add Backend support.
 4. Demo second prototype with backend suppport. Get more feedback on funtionality of app and how realistic it is that people would use it. 
