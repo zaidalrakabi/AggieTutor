@@ -1,7 +1,7 @@
 # AggieTutor
 Connecting students and tutors quicker and more effectively at UC Davis.
 
-##Creators:
+## Creators:
 
 | Zaid Al Rakabi | Jose Solorio Ramirez | Severus Tseng | Zhiyi Xu|
 |--------|--------|--------|--------|
