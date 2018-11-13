@@ -21,8 +21,8 @@ Connecting students and tutors quicker and more effectively at UC Davis.
 ![](https://github.com/ECS189E/AggieTutor/blob/master/images/AggieTutor%20VC's.png)
 
 ## Testing Plan
-1. Create prototype without any backend support.[aggie-tutor-prototype](https://pr.to/IN7MTL/)
+1. Create prototype without any backend support, similar to the App Prototype above.
 2. Demo prototype with friends. Get feedback on app aesthetics and user friendliness. 
-3. Add Backend support.
-4. Demo second prototype with backend suppport. Get more feedback on funtionality of app and how realistic it is that people would use it. 
+3. Add Backend support with Firebase and third party Api's.
+4. Demo second prototype with backend suppport and Api's. Get more feedback on funtionality of app and how realistic it is that people would use it. 
 
