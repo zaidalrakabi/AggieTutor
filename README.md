@@ -26,3 +26,9 @@ Connecting students and tutors quicker and more effectively at UC Davis.
 3. Add Backend support with Firebase and third party Api's.
 4. Demo second prototype with backend suppport and Api's. Get more feedback on funtionality of app and how realistic it is that people would use it. 
 
+## UI
+Please limit to the following the colors if possible:
+Aggie Blue: 	R: 49 G: 77 B: 127
+White
+Black
+Grey
