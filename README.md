@@ -3,7 +3,7 @@ Connecting students and tutors quicker and more effectively at UC Davis.
 
 ## Creators:
 
-| Zaid Al Rakabi | Jose Solorio Ramirez | Severus Tseng | Dolly Ye|
+| Zaid Al Rakabi | Jose Solorio Ramirez | Ruolan Zeng | Dolly Ye|
 |--------|--------|--------|--------|
 | ![](https://avatars1.githubusercontent.com/u/11766372?s=100&v=3)|![](https://avatars1.githubusercontent.com/u/17058366?s=100&v=4)       | ![](https://avatars2.githubusercontent.com/u/37227883?s=100&v=4)| ![](https://avatars3.githubusercontent.com/u/18589970?s=100&v=4)
 | [zaidalrakabi](https://github.com/zaidalrakabi)|[joselsoloriojr](https://github.com/joselsoloriojr)|[SeverusTseng](https://github.com/SeverusTseng)| [okdolly](https://github.com/okdolly)
