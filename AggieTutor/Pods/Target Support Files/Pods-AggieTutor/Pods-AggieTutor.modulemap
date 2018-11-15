@@ -1,0 +1,6 @@
+framework module Pods_AggieTutor {
+  umbrella header "Pods-AggieTutor-umbrella.h"
+
+  export *
+  module * { export * }
+}
