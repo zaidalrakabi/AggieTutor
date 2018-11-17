@@ -12,11 +12,11 @@
         <!--View Controller-->
         <scene sceneID="YjJ-z7-fu4">
             <objects>
-                <viewController id="6II-SO-7ab" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6pn-75-cv9">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6II-SO-7ab" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LoginSignUp" id="6pn-75-cv9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.094377152620000002" green="0.28885647650000001" blue="0.50602734090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="WqT-Nq-Aky"/>
                     </view>
                 </viewController>

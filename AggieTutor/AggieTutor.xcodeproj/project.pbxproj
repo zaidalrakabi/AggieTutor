@@ -13,10 +13,10 @@
 		E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDC219DF278009E0628 /* Assets.xcassets */; };
 		E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */; };
 		E4784A53FC6F916287B97A4D /* Pods_AggieTutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC3AE35DC71A44ABF4E837 /* Pods_AggieTutor.framework */; };
-		ECAEE64D219DF62D0058302B /* Login:Signup Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* Login:Signup Storyboard.storyboard */; };
-		ECAEE64F219DF64B0058302B /* Jobs:TutorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* Jobs:TutorStoryboard.storyboard */; };
-		ECAEE651219DF65C0058302B /* MyJob:RequestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE650219DF65C0058302B /* MyJob:RequestStoryboard.storyboard */; };
-		ECAEE653219DF6670058302B /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE652219DF6670058302B /* ProfileStoryboard.storyboard */; };
+		ECAEE64D219DF62D0058302B /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */; };
+		ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */; };
+		ECAEE651219DF65C0058302B /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE650219DF65C0058302B /* Request.storyboard */; };
+		ECAEE653219DF6670058302B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE652219DF6670058302B /* Profile.storyboard */; };
 		ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */; };
 		ECFFACE4219DFA5A00E581DD /* Images in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE3219DFA5A00E581DD /* Images */; };
 /* End PBXBuildFile section */
@@ -32,10 +32,10 @@
 		E054FCDC219DF278009E0628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECAEE64C219DF62D0058302B /* Login:Signup Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login:Signup Storyboard.storyboard"; sourceTree = "<group>"; };
-		ECAEE64E219DF64B0058302B /* Jobs:TutorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Jobs:TutorStoryboard.storyboard"; sourceTree = "<group>"; };
-		ECAEE650219DF65C0058302B /* MyJob:RequestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MyJob:RequestStoryboard.storyboard"; sourceTree = "<group>"; };
-		ECAEE652219DF6670058302B /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
+		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsTutors.storyboard; sourceTree = "<group>"; };
+		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
+		ECAEE652219DF6670058302B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
@@ -99,10 +99,10 @@
 				ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */,
 				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
 				E054FCE1219DF278009E0628 /* Info.plist */,
-				ECAEE64C219DF62D0058302B /* Login:Signup Storyboard.storyboard */,
-				ECAEE64E219DF64B0058302B /* Jobs:TutorStoryboard.storyboard */,
-				ECAEE650219DF65C0058302B /* MyJob:RequestStoryboard.storyboard */,
-				ECAEE652219DF6670058302B /* ProfileStoryboard.storyboard */,
+				ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */,
+				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
+				ECAEE650219DF65C0058302B /* Request.storyboard */,
+				ECAEE652219DF6670058302B /* Profile.storyboard */,
 				ECFFACE0219DF96000E581DD /* Support Files */,
 			);
 			path = AggieTutor;
@@ -178,13 +178,13 @@
 			files = (
 				E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */,
 				ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */,
-				ECAEE64F219DF64B0058302B /* Jobs:TutorStoryboard.storyboard in Resources */,
+				ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */,
 				E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */,
-				ECAEE651219DF65C0058302B /* MyJob:RequestStoryboard.storyboard in Resources */,
+				ECAEE651219DF65C0058302B /* Request.storyboard in Resources */,
 				E054FCDB219DF277009E0628 /* Main.storyboard in Resources */,
-				ECAEE653219DF6670058302B /* ProfileStoryboard.storyboard in Resources */,
+				ECAEE653219DF6670058302B /* Profile.storyboard in Resources */,
 				ECFFACE4219DFA5A00E581DD /* Images in Resources */,
-				ECAEE64D219DF62D0058302B /* Login:Signup Storyboard.storyboard in Resources */,
+				ECAEE64D219DF62D0058302B /* LoginSignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
