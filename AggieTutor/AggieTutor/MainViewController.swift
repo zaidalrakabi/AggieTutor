@@ -9,9 +9,9 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBAction func LoginSignUpPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "LoginSignUp", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+    @IBAction func DashboardPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

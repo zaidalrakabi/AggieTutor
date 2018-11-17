@@ -13,7 +13,7 @@
 		E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDC219DF278009E0628 /* Assets.xcassets */; };
 		E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */; };
 		E4784A53FC6F916287B97A4D /* Pods_AggieTutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC3AE35DC71A44ABF4E837 /* Pods_AggieTutor.framework */; };
-		ECAEE64D219DF62D0058302B /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */; };
+		ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* Dashboard.storyboard */; };
 		ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */; };
 		ECAEE651219DF65C0058302B /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE650219DF65C0058302B /* Request.storyboard */; };
 		ECAEE653219DF6670058302B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE652219DF6670058302B /* Profile.storyboard */; };
@@ -32,7 +32,7 @@
 		E054FCDC219DF278009E0628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
+		ECAEE64C219DF62D0058302B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsTutors.storyboard; sourceTree = "<group>"; };
 		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		ECAEE652219DF6670058302B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */,
 				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
 				E054FCE1219DF278009E0628 /* Info.plist */,
-				ECAEE64C219DF62D0058302B /* LoginSignUp.storyboard */,
+				ECAEE64C219DF62D0058302B /* Dashboard.storyboard */,
 				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
 				ECAEE650219DF65C0058302B /* Request.storyboard */,
 				ECAEE652219DF6670058302B /* Profile.storyboard */,
@@ -184,7 +184,7 @@
 				E054FCDB219DF277009E0628 /* Main.storyboard in Resources */,
 				ECAEE653219DF6670058302B /* Profile.storyboard in Resources */,
 				ECFFACE4219DFA5A00E581DD /* Images in Resources */,
-				ECAEE64D219DF62D0058302B /* LoginSignUp.storyboard in Resources */,
+				ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
