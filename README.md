@@ -18,7 +18,7 @@ Connecting students and tutors quicker and more effectively at UC Davis.
 * Google Firebase
 
 ## View Controllers & Models:
-![](https://github.com/ECS189E/AggieTutor/blob/master/images/AggieTutor%20VC's.png)
+![](https://github.com/ECS189E/AggieTutor/blob/master/AggieTutor/AggieTutor/Assets.xcassets/Images/AggieTutor%20VC's.png)
 
 ## Testing Plan
 1. Create prototype without any backend support, similar to the App Prototype above.
