@@ -9,6 +9,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    @IBAction func handleLogOut(_ sender: Any) {
+            try! Auth.auth().signOut()
+            self.dismiss(animated: false, completion: nil)
+    }
+    
     @IBAction func DashboardPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC")
