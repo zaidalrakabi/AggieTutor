@@ -16,10 +16,17 @@
 		E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDC219DF278009E0628 /* Assets.xcassets */; };
 		E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */; };
 		E4784A53FC6F916287B97A4D /* Pods_AggieTutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC3AE35DC71A44ABF4E837 /* Pods_AggieTutor.framework */; };
+		EC553FA621A6901900250D1E /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC553FA521A6901900250D1E /* SignIn.storyboard */; };
+		EC553FA821A6907B00250D1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC553FA721A6907B00250D1E /* LoginViewController.swift */; };
+		EC553FAA21A6908900250D1E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC553FA921A6908900250D1E /* SignUpViewController.swift */; };
+		EC553FAC21A6909600250D1E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC553FAB21A6909600250D1E /* MenuViewController.swift */; };
+		EC553FAE21A694D700250D1E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC553FAD21A694D700250D1E /* InitialViewController.swift */; };
+		EC553FB021A69D0E00250D1E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC553FAF21A69D0E00250D1E /* Extension.swift */; };
 		ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* Dashboard.storyboard */; };
 		ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */; };
 		ECAEE651219DF65C0058302B /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE650219DF65C0058302B /* Request.storyboard */; };
 		ECAEE653219DF6670058302B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE652219DF6670058302B /* Profile.storyboard */; };
+		ECD7595721AE38540021B87D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7595621AE38540021B87D /* HomeViewController.swift */; };
 		ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */; };
 		ECFFACE4219DFA5A00E581DD /* Images in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE3219DFA5A00E581DD /* Images */; };
 /* End PBXBuildFile section */
@@ -38,11 +45,18 @@
 		E054FCDC219DF278009E0628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC553FA521A6901900250D1E /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		EC553FA721A6907B00250D1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EC553FA921A6908900250D1E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EC553FAB21A6909600250D1E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EC553FAD21A694D700250D1E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		EC553FAF21A69D0E00250D1E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ECAEE64C219DF62D0058302B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsTutors.storyboard; sourceTree = "<group>"; };
 		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
 		ECAEE652219DF6670058302B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECD7595621AE38540021B87D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Support Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +113,13 @@
 			children = (
 				ECFFACE3219DFA5A00E581DD /* Images */,
 				E054FCD5219DF277009E0628 /* AppDelegate.swift */,
+<<<<<<< HEAD
+=======
+				E054FCD7219DF277009E0628 /* MainViewController.swift */,
+				E054FCD9219DF277009E0628 /* Main.storyboard */,
+				ECD7595621AE38540021B87D /* HomeViewController.swift */,
+				EC553FAF21A69D0E00250D1E /* Extension.swift */,
+>>>>>>> b02f14c2b23997c86d1c306fa75b4c51341602bf
 				E054FCDC219DF278009E0628 /* Assets.xcassets */,
 				E054FCD7219DF277009E0628 /* MainViewController.swift */,
 				ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */,
@@ -107,11 +128,20 @@
 				042264C021AF07E600038316 /* StudentDetailsViewController.swift */,
 				E054FCD9219DF277009E0628 /* Main.storyboard */,
 				ECAEE64C219DF62D0058302B /* Dashboard.storyboard */,
+				EC553FA521A6901900250D1E /* SignIn.storyboard */,
+				EC553FA721A6907B00250D1E /* LoginViewController.swift */,
+				EC553FAD21A694D700250D1E /* InitialViewController.swift */,
+				EC553FA921A6908900250D1E /* SignUpViewController.swift */,
+				EC553FAB21A6909600250D1E /* MenuViewController.swift */,
 				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
 				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
 				ECAEE650219DF65C0058302B /* Request.storyboard */,
 				ECAEE652219DF6670058302B /* Profile.storyboard */,
+<<<<<<< HEAD
 				E054FCE1219DF278009E0628 /* Info.plist */,
+=======
+				ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */,
+>>>>>>> b02f14c2b23997c86d1c306fa75b4c51341602bf
 				ECFFACE0219DF96000E581DD /* Support Files */,
 			);
 			path = AggieTutor;
@@ -120,7 +150,6 @@
 		ECFFACE0219DF96000E581DD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -191,6 +220,7 @@
 				E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */,
 				ECAEE651219DF65C0058302B /* Request.storyboard in Resources */,
 				E054FCDB219DF277009E0628 /* Main.storyboard in Resources */,
+				EC553FA621A6901900250D1E /* SignIn.storyboard in Resources */,
 				ECAEE653219DF6670058302B /* Profile.storyboard in Resources */,
 				ECFFACE4219DFA5A00E581DD /* Images in Resources */,
 				ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */,
@@ -231,6 +261,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AggieTutor/Pods-AggieTutor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -238,6 +269,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -253,9 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */,
 				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
 				042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */,
+=======
+				EC553FA821A6907B00250D1E /* LoginViewController.swift in Sources */,
+				EC553FAC21A6909600250D1E /* MenuViewController.swift in Sources */,
+				EC553FB021A69D0E00250D1E /* Extension.swift in Sources */,
+				ECD7595721AE38540021B87D /* HomeViewController.swift in Sources */,
+				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
+				EC553FAE21A694D700250D1E /* InitialViewController.swift in Sources */,
+				EC553FAA21A6908900250D1E /* SignUpViewController.swift in Sources */,
+>>>>>>> b02f14c2b23997c86d1c306fa75b4c51341602bf
 				E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */,
 				0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */,
 			);
