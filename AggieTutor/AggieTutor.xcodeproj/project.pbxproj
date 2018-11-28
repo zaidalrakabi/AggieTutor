@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042264C021AF07E600038316 /* StudentDetailsViewController.swift */; };
+		0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */; };
+		0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */; };
+		0467B74821AF57A900F84151 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73D21AF57A800F84151 /* Extension.swift */; };
+		0467B74921AF57A900F84151 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73E21AF57A800F84151 /* SignUpViewController.swift */; };
+		0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */; };
+		0467B74B21AF57A900F84151 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74021AF57A800F84151 /* AddCourseViewController.swift */; };
+		0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74121AF57A900F84151 /* LoginViewController.swift */; };
+		0467B74D21AF57A900F84151 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74221AF57A900F84151 /* MenuViewController.swift */; };
+		0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74321AF57A900F84151 /* InitialViewController.swift */; };
+		0467B74F21AF57A900F84151 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */; };
+		0467B75021AF57A900F84151 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467B74521AF57A900F84151 /* SignIn.storyboard */; };
+		0467B75121AF57A900F84151 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74621AF57A900F84151 /* HomeViewController.swift */; };
 		0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */; };
 		0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497E74A21A5F4A000D3A736 /* JobsViewController.swift */; };
 		E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054FCD5219DF277009E0628 /* AppDelegate.swift */; };
@@ -26,6 +38,18 @@
 
 /* Begin PBXFileReference section */
 		042264C021AF07E600038316 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
+		0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistedCourseViewController.swift; sourceTree = "<group>"; };
+		0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
+		0467B73D21AF57A800F84151 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0467B73E21AF57A800F84151 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorDashboardViewController.swift; sourceTree = "<group>"; };
+		0467B74021AF57A800F84151 /* AddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		0467B74121AF57A900F84151 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0467B74221AF57A900F84151 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0467B74321AF57A900F84151 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		0467B74521AF57A900F84151 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0467B74621AF57A900F84151 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
 		0497E74A21A5F4A000D3A736 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		68412559BDC19FDBBD101AEE /* Pods-AggieTutor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggieTutor.release.xcconfig"; path = "Pods/Target Support Files/Pods-AggieTutor/Pods-AggieTutor.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +121,18 @@
 		E054FCD4219DF277009E0628 /* AggieTutor */ = {
 			isa = PBXGroup;
 			children = (
+				0467B74021AF57A800F84151 /* AddCourseViewController.swift */,
+				0467B73D21AF57A800F84151 /* Extension.swift */,
+				0467B74621AF57A900F84151 /* HomeViewController.swift */,
+				0467B74321AF57A900F84151 /* InitialViewController.swift */,
+				0467B74121AF57A900F84151 /* LoginViewController.swift */,
+				0467B74221AF57A900F84151 /* MenuViewController.swift */,
+				0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */,
+				0467B74521AF57A900F84151 /* SignIn.storyboard */,
+				0467B73E21AF57A800F84151 /* SignUpViewController.swift */,
+				0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */,
+				0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */,
+				0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */,
 				ECFFACE3219DFA5A00E581DD /* Images */,
 				E054FCD5219DF277009E0628 /* AppDelegate.swift */,
 				E054FCDC219DF278009E0628 /* Assets.xcassets */,
@@ -191,9 +227,11 @@
 				E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */,
 				ECAEE651219DF65C0058302B /* Request.storyboard in Resources */,
 				E054FCDB219DF277009E0628 /* Main.storyboard in Resources */,
+				0467B75021AF57A900F84151 /* SignIn.storyboard in Resources */,
 				ECAEE653219DF6670058302B /* Profile.storyboard in Resources */,
 				ECFFACE4219DFA5A00E581DD /* Images in Resources */,
 				ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */,
+				0467B74F21AF57A900F84151 /* ProfileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +293,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */,
+				0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */,
+				0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */,
 				0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */,
+				0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */,
+				0467B75121AF57A900F84151 /* HomeViewController.swift in Sources */,
 				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
 				042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */,
+				0467B74B21AF57A900F84151 /* AddCourseViewController.swift in Sources */,
+				0467B74D21AF57A900F84151 /* MenuViewController.swift in Sources */,
 				E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */,
+				0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */,
+				0467B74921AF57A900F84151 /* SignUpViewController.swift in Sources */,
 				0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */,
+				0467B74821AF57A900F84151 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
