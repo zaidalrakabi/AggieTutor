@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class MainViewController: UIViewController {
     
     @IBAction func handleLogOut(_ sender: Any) {
