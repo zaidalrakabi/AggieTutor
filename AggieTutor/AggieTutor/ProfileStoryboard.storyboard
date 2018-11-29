@@ -217,7 +217,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-NA-6hh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MATH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKl-xa-qsA">
+                                                    <rect key="frame" x="17" y="30" width="47" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <segue destination="m8u-NQ-BbJ" kind="push" id="mMB-5L-0Z1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q6O-EB-WZc">
+                                        <rect key="frame" x="131.5" y="0.0" width="80" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBd-G7-3Gv">
                                                     <rect key="frame" x="13" y="20" width="54" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -226,8 +246,16 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <segue destination="x03-fh-eea" kind="push" id="A3Y-xt-9xU"/>
+                                            <segue destination="x03-fh-eea" kind="push" id="j10-7X-fbI"/>
                                         </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rc3-2h-uxg">
+                                        <rect key="frame" x="263" y="0.0" width="80" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -446,6 +474,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aFN-kq-kiw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XKZ-85-1vD"/>
                     <connections>
                         <outlet property="course" destination="R2O-PF-AXF" id="M49-VE-yKH"/>
                         <outlet property="grade" destination="gRG-o4-Egi" id="Ett-tM-tLN"/>
@@ -456,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIb-l8-Fh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87.200000000000003" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="729" y="-511"/>
         </scene>
         <!--Add a Course-->
         <scene sceneID="TgI-3B-mIu">
@@ -553,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2F-jX-RIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728.79999999999995" y="158.77061469265368"/>
+            <point key="canvasLocation" x="729" y="160"/>
         </scene>
         <!--Add a Course-->
         <scene sceneID="wnE-dd-tEb">

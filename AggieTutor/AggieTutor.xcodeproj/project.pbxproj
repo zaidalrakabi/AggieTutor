@@ -26,6 +26,11 @@
 		ECD7595721AE38540021B87D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD7595621AE38540021B87D /* HomeViewController.swift */; };
 		ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */; };
 		ECFFACE4219DFA5A00E581DD /* Images in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE3219DFA5A00E581DD /* Images */; };
+		EDAABB4F21AF639F0097B55C /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAABB4E21AF639F0097B55C /* ProfileStoryboard.storyboard */; };
+		EDAABB5121AF64C60097B55C /* TutorDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAABB5021AF64C50097B55C /* TutorDashboardViewController.swift */; };
+		EDAABB5321AF64E70097B55C /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAABB5221AF64E70097B55C /* TutorProfileViewController.swift */; };
+		EDAABB5521AF64EF0097B55C /* ExistedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAABB5421AF64EF0097B55C /* ExistedCourseViewController.swift */; };
+		EDAABB5721AF64F70097B55C /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAABB5621AF64F70097B55C /* AddCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Support Files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
+		EDAABB4E21AF639F0097B55C /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		EDAABB5021AF64C50097B55C /* TutorDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorDashboardViewController.swift; sourceTree = "<group>"; };
+		EDAABB5221AF64E70097B55C /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
+		EDAABB5421AF64EF0097B55C /* ExistedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistedCourseViewController.swift; sourceTree = "<group>"; };
+		EDAABB5621AF64F70097B55C /* AddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,11 @@
 				EC553FAD21A694D700250D1E /* InitialViewController.swift */,
 				EC553FA921A6908900250D1E /* SignUpViewController.swift */,
 				EC553FAB21A6909600250D1E /* MenuViewController.swift */,
+				EDAABB4E21AF639F0097B55C /* ProfileStoryboard.storyboard */,
+				EDAABB5621AF64F70097B55C /* AddCourseViewController.swift */,
+				EDAABB5421AF64EF0097B55C /* ExistedCourseViewController.swift */,
+				EDAABB5221AF64E70097B55C /* TutorProfileViewController.swift */,
+				EDAABB5021AF64C50097B55C /* TutorDashboardViewController.swift */,
 				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
 				ECAEE650219DF65C0058302B /* Request.storyboard */,
 				ECAEE652219DF6670058302B /* Profile.storyboard */,
@@ -199,6 +214,7 @@
 			files = (
 				E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */,
 				ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */,
+				EDAABB4F21AF639F0097B55C /* ProfileStoryboard.storyboard in Resources */,
 				ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */,
 				E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */,
 				ECAEE651219DF65C0058302B /* Request.storyboard in Resources */,
@@ -269,12 +285,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC553FA821A6907B00250D1E /* LoginViewController.swift in Sources */,
+				EDAABB5721AF64F70097B55C /* AddCourseViewController.swift in Sources */,
 				EC553FAC21A6909600250D1E /* MenuViewController.swift in Sources */,
 				EC553FB021A69D0E00250D1E /* Extension.swift in Sources */,
 				ECD7595721AE38540021B87D /* HomeViewController.swift in Sources */,
 				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
+				EDAABB5521AF64EF0097B55C /* ExistedCourseViewController.swift in Sources */,
 				EC553FAE21A694D700250D1E /* InitialViewController.swift in Sources */,
+				EDAABB5121AF64C60097B55C /* TutorDashboardViewController.swift in Sources */,
 				EC553FAA21A6908900250D1E /* SignUpViewController.swift in Sources */,
+				EDAABB5321AF64E70097B55C /* TutorProfileViewController.swift in Sources */,
 				E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
