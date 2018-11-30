@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		042264C021AF07E600038316 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
+		042264C021AF07E600038316 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentDetailsViewController.swift; path = AggieTutor/Controller/StudentDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistedCourseViewController.swift; sourceTree = "<group>"; };
 		0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
 		0467B73D21AF57A800F84151 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		0467B74221AF57A900F84151 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0467B74321AF57A900F84151 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
-		0467B74521AF57A900F84151 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0467B74521AF57A900F84151 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignIn.storyboard; path = AggieTutor/View/SignIn.storyboard; sourceTree = SOURCE_ROOT; };
 		0467B74621AF57A900F84151 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
 		0497E74A21A5F4A000D3A736 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECAEE64C219DF62D0058302B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsTutors.storyboard; sourceTree = "<group>"; };
-		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Request.storyboard; sourceTree = "<group>"; };
-		ECAEE652219DF6670058302B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = JobsTutors.storyboard; path = AggieTutor/View/JobsTutors.storyboard; sourceTree = SOURCE_ROOT; };
+		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Request.storyboard; path = AggieTutor/View/Request.storyboard; sourceTree = SOURCE_ROOT; };
+		ECAEE652219DF6670058302B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = AggieTutor/View/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
@@ -121,36 +121,52 @@
 		E054FCD4219DF277009E0628 /* AggieTutor */ = {
 			isa = PBXGroup;
 			children = (
-				0467B74021AF57A800F84151 /* AddCourseViewController.swift */,
+				E081B1EE21B0A16A00260CD7 /* Controller */,
 				0467B73D21AF57A800F84151 /* Extension.swift */,
-				0467B74621AF57A900F84151 /* HomeViewController.swift */,
-				0467B74321AF57A900F84151 /* InitialViewController.swift */,
-				0467B74121AF57A900F84151 /* LoginViewController.swift */,
-				0467B74221AF57A900F84151 /* MenuViewController.swift */,
-				0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */,
-				0467B74521AF57A900F84151 /* SignIn.storyboard */,
-				0467B73E21AF57A800F84151 /* SignUpViewController.swift */,
-				0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */,
-				0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */,
-				0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */,
+				E081B1EF21B0A2D100260CD7 /* View */,
 				ECFFACE3219DFA5A00E581DD /* Images */,
 				E054FCD5219DF277009E0628 /* AppDelegate.swift */,
 				E054FCDC219DF278009E0628 /* Assets.xcassets */,
-				E054FCD7219DF277009E0628 /* MainViewController.swift */,
 				ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */,
-				0497E74A21A5F4A000D3A736 /* JobsViewController.swift */,
-				0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */,
-				042264C021AF07E600038316 /* StudentDetailsViewController.swift */,
-				E054FCD9219DF277009E0628 /* Main.storyboard */,
-				ECAEE64C219DF62D0058302B /* Dashboard.storyboard */,
-				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
-				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
-				ECAEE650219DF65C0058302B /* Request.storyboard */,
-				ECAEE652219DF6670058302B /* Profile.storyboard */,
 				E054FCE1219DF278009E0628 /* Info.plist */,
 				ECFFACE0219DF96000E581DD /* Support Files */,
 			);
 			path = AggieTutor;
+			sourceTree = "<group>";
+		};
+		E081B1EE21B0A16A00260CD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E054FCD7219DF277009E0628 /* MainViewController.swift */,
+				0467B74021AF57A800F84151 /* AddCourseViewController.swift */,
+				0467B74321AF57A900F84151 /* InitialViewController.swift */,
+				0467B74121AF57A900F84151 /* LoginViewController.swift */,
+				0467B73E21AF57A800F84151 /* SignUpViewController.swift */,
+				0467B74221AF57A900F84151 /* MenuViewController.swift */,
+				0467B74621AF57A900F84151 /* HomeViewController.swift */,
+				0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */,
+				0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */,
+				0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */,
+				0497E74A21A5F4A000D3A736 /* JobsViewController.swift */,
+				0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */,
+				042264C021AF07E600038316 /* StudentDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E081B1EF21B0A2D100260CD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECAEE64C219DF62D0058302B /* Dashboard.storyboard */,
+				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
+				ECAEE650219DF65C0058302B /* Request.storyboard */,
+				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
+				0467B74521AF57A900F84151 /* SignIn.storyboard */,
+				0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */,
+				ECAEE652219DF6670058302B /* Profile.storyboard */,
+				E054FCD9219DF277009E0628 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ECFFACE0219DF96000E581DD /* Support Files */ = {

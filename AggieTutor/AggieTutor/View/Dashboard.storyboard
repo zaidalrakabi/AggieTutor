@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="YjJ-z7-fu4">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6II-SO-7ab" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6II-SO-7ab" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Dashboard" id="6pn-75-cv9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

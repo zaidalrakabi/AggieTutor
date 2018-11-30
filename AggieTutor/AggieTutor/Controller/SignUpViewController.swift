@@ -162,8 +162,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 changeRequest?.commitChanges{ error in
                     if error == nil {
                         print("User displayed name changed")
+                        
                     }
-                }
+                
+            }
             } else {
                 print("Error creating user: \(error!.localizedDescription)")
             }
