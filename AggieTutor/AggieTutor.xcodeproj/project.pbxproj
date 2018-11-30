@@ -18,7 +18,6 @@
 		0467B74D21AF57A900F84151 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74221AF57A900F84151 /* MenuViewController.swift */; };
 		0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74321AF57A900F84151 /* InitialViewController.swift */; };
 		0467B74F21AF57A900F84151 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */; };
-		0467B75021AF57A900F84151 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467B74521AF57A900F84151 /* SignIn.storyboard */; };
 		0467B75121AF57A900F84151 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B74621AF57A900F84151 /* HomeViewController.swift */; };
 		0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */; };
 		0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497E74A21A5F4A000D3A736 /* JobsViewController.swift */; };
@@ -48,7 +47,6 @@
 		0467B74221AF57A900F84151 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0467B74321AF57A900F84151 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
-		0467B74521AF57A900F84151 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignIn.storyboard; path = AggieTutor/View/SignIn.storyboard; sourceTree = SOURCE_ROOT; };
 		0467B74621AF57A900F84151 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
 		0497E74A21A5F4A000D3A736 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */,
 				ECAEE650219DF65C0058302B /* Request.storyboard */,
 				ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */,
-				0467B74521AF57A900F84151 /* SignIn.storyboard */,
 				0467B74421AF57A900F84151 /* ProfileStoryboard.storyboard */,
 				ECAEE652219DF6670058302B /* Profile.storyboard */,
 				E054FCD9219DF277009E0628 /* Main.storyboard */,
@@ -243,7 +240,6 @@
 				E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */,
 				ECAEE651219DF65C0058302B /* Request.storyboard in Resources */,
 				E054FCDB219DF277009E0628 /* Main.storyboard in Resources */,
-				0467B75021AF57A900F84151 /* SignIn.storyboard in Resources */,
 				ECAEE653219DF6670058302B /* Profile.storyboard in Resources */,
 				ECFFACE4219DFA5A00E581DD /* Images in Resources */,
 				ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */,
