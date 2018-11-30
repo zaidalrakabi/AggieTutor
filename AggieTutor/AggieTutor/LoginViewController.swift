@@ -71,7 +71,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func handleDismissButton(_ sender: Any) {
+    @IBAction func handelDismiss(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
     

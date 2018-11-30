@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import  Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -41,9 +41,9 @@ class SignUpViewController: UIViewController {
         activityView.center = continueButton.center
         view.addSubview(activityView)
         
-        usernameField.delegate = self as? UITextFieldDelegate
-        emailField.delegate = self as? UITextFieldDelegate
-        passwordField.delegate = self as? UITextFieldDelegate
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
         
         usernameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
@@ -74,7 +74,8 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func handleDismissButton(_ sender: Any) {
+
+    @IBAction func handelDismiss(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
     
