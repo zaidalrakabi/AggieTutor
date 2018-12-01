@@ -92,7 +92,12 @@ extension TutorsViewController: UISearchBarDelegate{
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        curTutors = tutors.filter{matchesSearch(tutor: $0, searchText: searchText) }
+        if searchText.isEmpty {
+            curTutors = tutors
+        } else {
+            curTutors = tutors.filter{matchesSearch(tutor: $0, searchText: searchText) }
+        }
+       
         self.tableView.reloadData()
     }
 }
