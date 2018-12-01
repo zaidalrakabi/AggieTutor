@@ -14,8 +14,6 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    @IBOutlet weak var dismissButton: UIButton!
-    
     
     var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
@@ -69,10 +67,6 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         get {
             return .lightContent
         }
-    }
-    
-    @IBAction func handelDismiss(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
     }
     
     /**
@@ -147,7 +141,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         
         Auth.auth().signIn(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil {
-                self.dismiss(animated: false, completion: nil)
+                self.performSegue(withIdentifier: "toMainController", sender: self)
             } else {
                 print("Error logging in: \(error!.localizedDescription)")
             }
