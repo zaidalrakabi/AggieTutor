@@ -18,12 +18,39 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="R3H-ti-atV" kind="relationship" relationship="rootViewController" id="hdE-Ws-qfG"/>
+                        <segue destination="MvC-GR-R0Z" kind="relationship" relationship="rootViewController" id="GSU-Z9-qRa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdZ-9h-dLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1687" y="160"/>
+            <point key="canvasLocation" x="-2633" y="151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GPB-Ry-Y2b">
+            <objects>
+                <viewController id="MvC-GR-R0Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIy-eG-xVR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iL-49-i3t">
+                                <rect key="frame" x="131" y="559" width="113" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Tutor Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cig-Rc-9Ox"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Twv-Nd-3LP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWp-Nl-ga4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1778.4000000000001" y="150.67466266866569"/>
         </scene>
         <!--My Tutor Profile-->
         <scene sceneID="tZv-bF-zeq">
@@ -34,13 +61,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumulative UC GPA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSz-FG-Dcs">
-                                <rect key="frame" x="16" y="92" width="152" height="21"/>
+                                <rect key="frame" x="16" y="48" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max number available to work per week" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-yV-C9x">
-                                <rect key="frame" x="16" y="133" width="176" height="53"/>
+                                <rect key="frame" x="16" y="89" width="176" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="1E7-Sf-phw"/>
                                     <constraint firstAttribute="height" constant="53" id="Xzl-Jf-dTm"/>
@@ -50,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English courses you have taken at UC Davis with a B or higher grade" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0o-mA-kNB">
-                                <rect key="frame" x="16" y="205" width="343" height="57"/>
+                                <rect key="frame" x="16" y="161" width="343" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="WcA-no-6Ne"/>
                                     <constraint firstAttribute="height" constant="57" id="srj-n7-ncU"/>
@@ -60,7 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reasons that you are interested in becoming a tutor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD5-X5-ZDz">
-                                <rect key="frame" x="16" y="301" width="343" height="53"/>
+                                <rect key="frame" x="16" y="257" width="343" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="W9x-jz-GHy"/>
                                 </constraints>
@@ -69,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutoring strategies you would use to involve the student in the problem solving process" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiW-9j-Afj">
-                                <rect key="frame" x="16" y="436" width="343" height="59"/>
+                                <rect key="frame" x="16" y="392" width="343" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="d5h-dl-OHr"/>
                                 </constraints>
@@ -78,25 +105,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-Zp-wEZ">
-                                <rect key="frame" x="209" y="87" width="82" height="30"/>
+                                <rect key="frame" x="209" y="43" width="82" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gl-U0-sz8">
-                                <rect key="frame" x="209" y="144" width="75.5" height="30"/>
+                                <rect key="frame" x="209" y="100" width="75.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWf-ea-wkc">
-                                <rect key="frame" x="16" y="270" width="343" height="21"/>
+                                <rect key="frame" x="16" y="226" width="343" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-ZD-8aC">
-                                <rect key="frame" x="16" y="371" width="343" height="57"/>
+                                <rect key="frame" x="16" y="327" width="343" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="2yP-Zh-etz"/>
                                 </constraints>
@@ -105,7 +132,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1O-og-x3v">
-                                <rect key="frame" x="166" y="614" width="193" height="33"/>
+                                <rect key="frame" x="166" y="570" width="193" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="vS0-ny-Iq7"/>
@@ -120,7 +147,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-RZ-VfW">
-                                <rect key="frame" x="16" y="503" width="343" height="89"/>
+                                <rect key="frame" x="16" y="459" width="343" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="T28-eW-gfQ"/>
                                 </constraints>
@@ -129,7 +156,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7W-9m-qtt">
-                                <rect key="frame" x="16" y="614" width="58" height="33"/>
+                                <rect key="frame" x="16" y="570" width="58" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="fC5-zh-L4f"/>
