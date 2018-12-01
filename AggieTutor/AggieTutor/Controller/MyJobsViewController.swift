@@ -1,26 +1,15 @@
 //
-//  TutorProfileViewController.swift
+//  MyJobsViewController.swift
 //  AggieTutor
 //
-//  Created by ruolan zeng on 11/27/18.
+//  Created by Zaid Alrakabi on 12/1/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 
 import UIKit
 
-class TutorProfileViewController: UIViewController {
-    
-    @IBOutlet weak var GPA: UITextField!
-    @IBOutlet weak var workHours: UITextField!
-    @IBOutlet weak var language: UITextField!
-    @IBOutlet weak var tutorInterest: UITextField!
-    @IBOutlet weak var tutorStrategy: UITextField!
-    
-    @IBAction func BackPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func saveChanges(_ sender: UIButton) {
-    }
+class MyJobsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

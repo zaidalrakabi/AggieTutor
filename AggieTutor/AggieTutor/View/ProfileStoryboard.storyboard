@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l94-Ra-eYm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -178,7 +178,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RZv-ng-xK7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Tutor Profile" id="KH9-xV-zRp"/>
+                    <navigationItem key="navigationItem" title="My Tutor Profile" id="KH9-xV-zRp">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="sort-left-48" id="GjC-Dd-nhE">
+                            <connections>
+                                <action selector="BackPressed:" destination="R3H-ti-atV" id="8fX-dI-ajD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="GPA" destination="wwC-Zp-wEZ" id="mex-Ee-Qte"/>
                         <outlet property="language" destination="nWf-ea-wkc" id="Ep1-9z-6pK"/>
@@ -653,4 +659,7 @@
             <point key="canvasLocation" x="728.79999999999995" y="158.77061469265368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sort-left-48" width="36" height="36"/>
+    </resources>
 </document>
