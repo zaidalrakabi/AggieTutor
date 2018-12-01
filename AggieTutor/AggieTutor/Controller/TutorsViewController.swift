@@ -31,21 +31,21 @@ class TutorsViewController: UIViewController {
         [
             "name" : "Jose Solorio",
             "hourly_rate" : 15,
-            "class" : "ECS 10",
+            "teaching" : "ECS 10",
             "TA" : false,
             "grade" : "A"
         ],
         [
             "name" : "Antonio Solorio",
             "hourly_rate" : 13,
-            "class" : "MAT 108",
+            "teaching" : "MAT 108",
             "TA" : true,
             "grade": nil
         ],
         [
             "name" : "Peter Griffin",
             "hourly_rate" : 100,
-            "class" : "ECS 154",
+            "teaching" : "ECS 154",
             "TA" : true,
             "grade": nil
         ]
@@ -62,8 +62,8 @@ class TutorsViewController: UIViewController {
     func getTutors(){
         for tutor in response {
             let name:String = tutor["name"] as? String ?? ""
-            let hw:Int = tutor["hourly_wage"] as? Int ?? 0
-            let teaching:String = tutor["class"] as? String ?? ""
+            let hw:Int = tutor["hourly_rate"] as? Int ?? 0
+            let teaching:String = tutor["teaching"] as? String ?? "<ERROR>"
             let grade:String = tutor["grade"] as? String ?? ""
             let TA:Bool = tutor["TA"] as? Bool ?? false
             tutors.append(Tutor(name: name, hw: hw, teaching: teaching, grade: grade, TA: TA))
@@ -82,10 +82,10 @@ class TutorsViewController: UIViewController {
 
 extension TutorsViewController: UISearchBarDelegate{
     func matchesSearch(tutor:Tutor, searchText:String) -> Bool{
-        if tutor.name.contains(searchText){
+        if tutor.name.lowercased().contains(searchText.lowercased()){
             return true
         }
-        else if tutor.teaching.contains(searchText){
+        else if tutor.teaching.lowercased().contains(searchText.lowercased()){
             return true
         }
         return false
@@ -128,7 +128,7 @@ class TutorCell: UITableViewCell{
     func setTutor(tutor: Tutor){
         //Get Name
         TutorNameLabel.text = tutor.name
-        ClassLabel.text = tutor.teaching
+        ClassLabel.text = tutor.teaching 
         //Get Rate
         let rate = tutor.hourly_wage
         RateLabel.text = "Hourly Rate: $\(rate)"

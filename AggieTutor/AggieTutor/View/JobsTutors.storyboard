@@ -105,6 +105,7 @@
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="TutorCell"/>
                                         <connections>
+                                            <outlet property="ClassLabel" destination="6hb-if-NDJ" id="vNc-fh-ML3"/>
                                             <outlet property="GoToDetails" destination="ItE-ep-Q4i" id="DJh-wc-aco"/>
                                             <outlet property="QualificationsLabel" destination="u6j-q0-FAn" id="Agl-Ph-c3T"/>
                                             <outlet property="RateLabel" destination="yFR-k7-zho" id="xG5-9g-R5L"/>
