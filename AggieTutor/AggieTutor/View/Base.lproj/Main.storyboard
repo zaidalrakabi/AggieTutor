@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z0k-8L-5uY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPf-eP-Ih0">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,34 +89,6 @@
             </objects>
             <point key="canvasLocation" x="3123" y="54"/>
         </scene>
-        <!--Initial View Controller-->
-        <scene sceneID="MVN-51-XrX">
-            <objects>
-                <viewController id="Z0k-8L-5uY" customClass="InitialViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vuw-Sq-KLb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jdh-ZN-io2">
-                                <rect key="frame" x="150" y="230" width="20" height="20"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Jdh-ZN-io2" firstAttribute="centerY" secondItem="vuw-Sq-KLb" secondAttribute="centerY" id="gJZ-8V-3hw"/>
-                            <constraint firstItem="Jdh-ZN-io2" firstAttribute="centerX" secondItem="vuw-Sq-KLb" secondAttribute="centerX" id="xuw-jv-4va"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KbL-3g-nN8"/>
-                    </view>
-                    <connections>
-                        <segue destination="hPf-eP-Ih0" kind="show" identifier="toMenuScreen" id="54t-BS-LEB"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toHomeScreen" id="aNL-LN-0yP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUO-tU-qKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1799" y="54"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="ciu-F0-KpC">
             <objects>
@@ -175,6 +147,7 @@
                     <connections>
                         <outlet property="loginButton" destination="JpQ-jg-vMr" id="Eof-mT-8K5"/>
                         <outlet property="signupButton" destination="hPi-MJ-I32" id="j6Y-EQ-cHy"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toHomeScreen" id="zVK-pq-Qf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svN-6L-J3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,13 +210,13 @@
                                             <constraint firstAttribute="height" constant="1" id="y90-x9-xPu"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-5X-BLj" userLabel="errorLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-5X-BLj" userLabel="errorLabel">
                                         <rect key="frame" x="24" y="264" width="200" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="7dU-iH-yD9"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bIe-ev-Awg"/>
+                                            <constraint firstAttribute="width" constant="200" id="bIe-ev-Awg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -386,11 +359,11 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGS-kO-7a2" userLabel="Error Label">
-                                        <rect key="frame" x="24" y="306" width="200" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGS-kO-7a2" userLabel="Error Label">
+                                        <rect key="frame" x="24" y="306" width="200" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="0iV-Bt-aG1"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="eRP-JG-fy1"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="0iV-Bt-aG1"/>
+                                            <constraint firstAttribute="width" constant="200" id="eRP-JG-fy1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -469,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgU-Oo-wnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298.5507246376812" y="608.03571428571422"/>
+            <point key="canvasLocation" x="1643" y="1056"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="de1-Bc-5KH">
@@ -491,6 +464,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y2i-JX-7K0"/>
+        <segue reference="zVK-pq-Qf3"/>
     </inferredMetricsTieBreakers>
 </document>
