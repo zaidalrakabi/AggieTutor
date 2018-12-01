@@ -8,8 +8,26 @@
 
 import UIKit
 
+class Tutor {
+    var name = ""
+    var hourly_wage = 0
+    var teaching = ""
+    var grade = ""
+    var TA = false
+    init(name: String, hw: Int, teaching: String , grade: String, TA : Bool) {
+        self.name = name
+        self.hourly_wage = hw
+        self.teaching = teaching
+        self.grade = grade
+        self.TA = TA
+    }
+}
+
 class TutorsViewController: UIViewController {
-    let tutors = [
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let response = [
         [
             "name" : "Jose Solorio",
             "hourly_rate" : 15,
@@ -23,9 +41,17 @@ class TutorsViewController: UIViewController {
             "class" : "MAT 108",
             "TA" : true,
             "grade": nil
+        ],
+        [
+            "name" : "Peter Griffin",
+            "hourly_rate" : 100,
+            "class" : "ECS 154",
+            "TA" : true,
+            "grade": nil
         ]
     ]
-    @IBOutlet weak var tableView: UITableView!
+    var tutors = [Tutor]()
+    var curTutors = [Tutor]()
     
     @IBAction func GoToJobs(_ sender: Any) {
         let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
@@ -33,23 +59,52 @@ class TutorsViewController: UIViewController {
         self.navigationController?.pushViewController(JobsVC, animated: true)
     }
     
+    func getTutors(){
+        for tutor in response {
+            let name:String = tutor["name"] as? String ?? ""
+            let hw:Int = tutor["hourly_wage"] as? Int ?? 0
+            let teaching:String = tutor["class"] as? String ?? ""
+            let grade:String = tutor["grade"] as? String ?? ""
+            let TA:Bool = tutor["TA"] as? Bool ?? false
+            tutors.append(Tutor(name: name, hw: hw, teaching: teaching, grade: grade, TA: TA))
+        }
+        curTutors = tutors
+    }
+    
     @IBAction func AddTutorPost(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getTutors()
         // Do any additional setup after loading the view.
+    }
+}
+
+extension TutorsViewController: UISearchBarDelegate{
+    func matchesSearch(tutor:Tutor, searchText:String) -> Bool{
+        if tutor.name.contains(searchText){
+            return true
+        }
+        else if tutor.teaching.contains(searchText){
+            return true
+        }
+        return false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        curTutors = tutors.filter{matchesSearch(tutor: $0, searchText: searchText) }
+        self.tableView.reloadData()
     }
 }
 
 extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tutors.count
+        return curTutors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Creating TableCell\n")
-        let tutor = tutors[indexPath.row]
+        let tutor = curTutors[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TutorCell") as! TutorCell
         cell.setTutor(tutor: tutor)
         return cell
@@ -63,21 +118,22 @@ class TutorCell: UITableViewCell{
     @IBOutlet weak var RateLabel: UILabel!
     @IBOutlet weak var QualificationsLabel: UILabel!
     @IBOutlet weak var GoToDetails: UIButton!
+    @IBOutlet weak var ClassLabel: UILabel!
     
-    func setTutor(tutor: [String: Any?]){
+    func setTutor(tutor: Tutor){
         //Get Name
-        let name = tutor["name"] as? String
-        TutorNameLabel.text = name ?? "<Error: NO_NAME>"
+        TutorNameLabel.text = tutor.name
+        ClassLabel.text = tutor.teaching
         //Get Rate
-        let rate = tutor["hourly_rate"] as? Int ?? 0
+        let rate = tutor.hourly_wage
         RateLabel.text = "Hourly Rate: $\(rate)"
         //Get Qualification
-        let isTA = tutor["TA"] as? Bool ?? false
+        let isTA = tutor.TA
         var TA = "No"
         if (isTA) {
             TA = "Yes"
         }
-        let grade = tutor["grade"] as? String ?? "N\\A"
+        let grade = tutor.grade
         QualificationsLabel.text = "Grade: \(grade),   TA: \(TA)"
     }
 }

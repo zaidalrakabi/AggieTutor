@@ -105,6 +105,7 @@
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="TutorCell"/>
                                         <connections>
+                                            <outlet property="ClassLabel" destination="6hb-if-NDJ" id="hQf-b5-Qm8"/>
                                             <outlet property="GoToDetails" destination="ItE-ep-Q4i" id="DJh-wc-aco"/>
                                             <outlet property="QualificationsLabel" destination="u6j-q0-FAn" id="Agl-Ph-c3T"/>
                                             <outlet property="RateLabel" destination="yFR-k7-zho" id="xG5-9g-R5L"/>
@@ -124,6 +125,9 @@
                                     <constraint firstAttribute="height" constant="56" id="pwf-gU-0n4"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tnd-vi-n0n" id="lBp-V1-0Nw"/>
+                                </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsE-Xr-DhU">
                                 <rect key="frame" x="182" y="77" width="84" height="30"/>
@@ -189,6 +193,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="searchBar" destination="px6-3t-Rk7" id="NVS-tD-Wq7"/>
                         <outlet property="searchDisplayController" destination="AEk-fg-JGO" id="ld1-cu-UmT"/>
                         <outlet property="tableView" destination="wjV-7r-jjF" id="d0m-GB-NyM"/>
                     </connections>
