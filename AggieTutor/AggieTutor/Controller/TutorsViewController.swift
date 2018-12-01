@@ -70,9 +70,6 @@ class TutorsViewController: UIViewController {
         }
         curTutors = tutors
     }
-    
-    @IBAction func AddTutorPost(_ sender: Any) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         getTutors()
