@@ -1,28 +1,28 @@
 //
-//  ExistedCourseViewController.swift
+//  ProfileViewController.swift
 //  AggieTutor
 //
-//  Created by ruolan zeng on 11/27/18.
+//  Created by Zaid Alrakabi on 12/1/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 
 import UIKit
 
-class ExistedCourseViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var course: UITextField!
-    @IBOutlet weak var quarterCompleted: UITextField!
-    @IBOutlet weak var professor: UITextField!
-    @IBOutlet weak var grade: UITextField!
-    @IBOutlet weak var reasons: UITextField!
-    
-    @IBAction func save(_ sender: UIButton) {
+    @IBAction func EditPressed(_ sender: Any) {
     }
+    @IBAction func BackPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

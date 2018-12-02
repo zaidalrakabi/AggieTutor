@@ -29,6 +29,7 @@
 		E0700E0621B3476300C89B34 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */; };
 		E0700E0821B34AF700C89B34 /* MyJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */; };
 		E0700E0A21B34B2200C89B34 /* MyJobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0700E0921B34B2200C89B34 /* MyJobs.storyboard */; };
+		E0700E0C21B355B800C89B34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0B21B355B800C89B34 /* ProfileViewController.swift */; };
 		E4784A53FC6F916287B97A4D /* Pods_AggieTutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC3AE35DC71A44ABF4E837 /* Pods_AggieTutor.framework */; };
 		ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* Dashboard.storyboard */; };
 		ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */; };
@@ -36,6 +37,7 @@
 		ECAEE653219DF6670058302B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE652219DF6670058302B /* Profile.storyboard */; };
 		ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */; };
 		ECFFACE4219DFA5A00E581DD /* Images in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE3219DFA5A00E581DD /* Images */; };
+		ED66CF0521B33F8500CA2C4C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66CF0421B33F8500CA2C4C /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,7 @@
 		E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJobsViewController.swift; sourceTree = "<group>"; };
 		E0700E0921B34B2200C89B34 /* MyJobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyJobs.storyboard; sourceTree = "<group>"; };
+		E0700E0B21B355B800C89B34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ECAEE64C219DF62D0058302B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = JobsTutors.storyboard; path = AggieTutor/View/JobsTutors.storyboard; sourceTree = SOURCE_ROOT; };
 		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Request.storyboard; path = AggieTutor/View/Request.storyboard; sourceTree = SOURCE_ROOT; };
@@ -73,6 +76,7 @@
 		ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
+		ED66CF0421B33F8500CA2C4C /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = AggieTutor/CourseCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			children = (
 				E081B1EE21B0A16A00260CD7 /* Controller */,
 				0467B73D21AF57A800F84151 /* Extension.swift */,
+				ED66CF0421B33F8500CA2C4C /* CourseCell.swift */,
 				E081B1EF21B0A2D100260CD7 /* View */,
 				ECFFACE3219DFA5A00E581DD /* Images */,
 				E054FCD5219DF277009E0628 /* AppDelegate.swift */,
@@ -156,6 +161,7 @@
 				042264C021AF07E600038316 /* StudentDetailsViewController.swift */,
 				E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */,
 				E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */,
+				E0700E0B21B355B800C89B34 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */,
 				0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */,
 				0467B75121AF57A900F84151 /* HomeViewController.swift in Sources */,
+				E0700E0C21B355B800C89B34 /* ProfileViewController.swift in Sources */,
 				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
 				E0700E0621B3476300C89B34 /* SideMenuTableViewController.swift in Sources */,
 				042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				0467B74D21AF57A900F84151 /* MenuViewController.swift in Sources */,
 				E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */,
 				0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */,
+				ED66CF0521B33F8500CA2C4C /* CourseCell.swift in Sources */,
 				0467B74921AF57A900F84151 /* SignUpViewController.swift in Sources */,
 				0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */,
 				E0700E0821B34AF700C89B34 /* MyJobsViewController.swift in Sources */,
