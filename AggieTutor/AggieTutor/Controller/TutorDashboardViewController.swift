@@ -8,23 +8,40 @@
 
 import UIKit
 
-class TutorDashboardViewController: UIViewController {
-
+class TutorDashboardViewController: UICollectionViewController {
+    
+    struct Storyboard {
+        static let courseCell = "CourseCell"
+        static let leftAndRightPaddings: CGFloat = 2.0
+        static let numberOfItemsPerRow: CGFloat = 3.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // change the layout of the collection view
+        let collectionViewWidth = collectionView?.frame.width
+        let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
+        
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
     }
     
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    MARK: - UICollectionViewDataSource
+ */
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1;//1: the number of courses
     }
-    */
-
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.courseCell, for: indexPath) as! CourseCell
+        
+        cell.courseName.text! = "ECS189E"//"to-be-set": courses[indexPath.item].name
+        return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        
+    }
 }

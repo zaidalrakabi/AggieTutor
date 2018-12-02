@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func ProfilePressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let storyboard = UIStoryboard(name: "ProfileStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfileVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
