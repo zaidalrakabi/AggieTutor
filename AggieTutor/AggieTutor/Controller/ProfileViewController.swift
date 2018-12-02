@@ -10,12 +10,19 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBAction func EditPressed(_ sender: Any) {
+    }
     @IBAction func BackPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
