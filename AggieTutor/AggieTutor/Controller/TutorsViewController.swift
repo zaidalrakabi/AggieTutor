@@ -7,49 +7,14 @@
 //
 
 import UIKit
-
-class Tutor {
-    var name = ""
-    var hourly_wage = 0
-    var teaching = ""
-    var grade = ""
-    var TA = false
-    init(name: String, hw: Int, teaching: String , grade: String, TA : Bool) {
-        self.name = name
-        self.hourly_wage = hw
-        self.teaching = teaching
-        self.grade = grade
-        self.TA = TA
-    }
-}
+import FirebaseDatabase
 
 class TutorsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let response = [
-        [
-            "name" : "Jose Solorio",
-            "hourly_rate" : 15,
-            "teaching" : "ECS 10",
-            "TA" : false,
-            "grade" : "A"
-        ],
-        [
-            "name" : "Antonio Solorio",
-            "hourly_rate" : 13,
-            "teaching" : "MAT 108",
-            "TA" : true,
-            "grade": nil
-        ],
-        [
-            "name" : "Peter Griffin",
-            "hourly_rate" : 100,
-            "teaching" : "ECS 154",
-            "TA" : true,
-            "grade": nil
-        ]
-    ]
+    var databaseRefer: DatabaseReference!
+    var datebaseHandle: DatabaseHandle!
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
     
@@ -60,19 +25,25 @@ class TutorsViewController: UIViewController {
     }
     
     func getTutors(){
-        for tutor in response {
-            let name:String = tutor["name"] as? String ?? ""
-            let hw:Int = tutor["hourly_rate"] as? Int ?? 0
-            let teaching:String = tutor["teaching"] as? String ?? "<ERROR>"
-            let grade:String = tutor["grade"] as? String ?? ""
-            let TA:Bool = tutor["TA"] as? Bool ?? false
-            tutors.append(Tutor(name: name, hw: hw, teaching: teaching, grade: grade, TA: TA))
-        }
-        curTutors = tutors
+        databaseRefer = Database.database().reference()
+        let query = self.databaseRefer.child("users").queryOrdered(byChild: "tutor").queryEqual(toValue: true)
+        query.observe(.value, with: { DataSnapshot in
+            for child in DataSnapshot.children {
+                let tutor = child as! DataSnapshot
+                self.tutors.append(Tutor(tutor: tutor))
+            }
+                DispatchQueue.main.async{
+                self.curTutors = self.tutors
+                self.tableView.reloadData()
+            }
+        })
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         getTutors()
+        print("finished loading")
         // Do any additional setup after loading the view.
     }
 }
