@@ -10,12 +10,15 @@ import UIKit
 import Firebase
 
 class MenuViewController: UIViewController {
-
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: "toHomeScreen", sender: self)
+        }
+        
         view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
     }
     override func didReceiveMemoryWarning() {
@@ -31,6 +34,7 @@ class MenuViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        
         if Auth.auth().currentUser != nil {
             self.performSegue(withIdentifier: "toHomeScreen", sender: self)
         }
@@ -42,6 +46,7 @@ class MenuViewController: UIViewController {
         }
     }
     
-
-   
+    
+    
 }
+

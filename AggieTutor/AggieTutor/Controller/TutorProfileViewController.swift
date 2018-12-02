@@ -16,6 +16,9 @@ class TutorProfileViewController: UIViewController {
     @IBOutlet weak var tutorInterest: UITextField!
     @IBOutlet weak var tutorStrategy: UITextField!
     
+    @IBAction func BackPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func saveChanges(_ sender: UIButton) {
     }
     override func viewDidLoad() {

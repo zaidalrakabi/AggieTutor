@@ -11,39 +11,40 @@ import Firebase
 
 class MainViewController: UIViewController {
     
-    @IBAction func handleLogOut(_ sender: Any) {
-            try! Auth.auth().signOut()
-            self.dismiss(animated: false, completion: nil)
-    }
+    /*
+     let storyboard = UIStoryboard(name: "Request", bundle: nil)
+     let vc = storyboard.instantiateViewController(withIdentifier: "RequestVC")
+     self.navigationController?.pushViewController(vc, animated: true)
+ */
     
-    @IBAction func DashboardPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardVC")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func JobTutorsPressed(_ sender: Any) {
+    @IBAction func FindTutorPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TutorsVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func ProfilePressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "ProfileStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileVC")
+
+    @IBAction func FindJobPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "JobsVC")
+
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func handleLogOut(_ sender: Any) {
+        try! Auth.auth().signOut()
+        navigationController?.popToRootViewController(animated: true)
+        
     }
     
-    @IBAction func RequestsPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Request", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RequestVC")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    override func viewDidLoad() {
+
+override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
+
 

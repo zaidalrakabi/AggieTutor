@@ -8,5 +8,6 @@ target 'AggieTutor' do
   # Pods for AggieTutor
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  
+  pod 'SideMenu'
+
 end
