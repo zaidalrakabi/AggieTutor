@@ -9,52 +9,12 @@
 import UIKit
 import FirebaseDatabase
 
-
-class Tutor {
-    var name = ""
-    var hourly_wage = 0
-    var teaching = ""
-    var grade = ""
-    var TA = false
-    init(tutor: DataSnapshot) {
-        let td = tutor.value as? [String: Any] ?? [:]
-        self.name = td["name"] as? String ?? ""
-        self.hourly_wage = td["hourly_rate"] as? Int ?? 0
-        self.teaching = td["class"] as? String ?? ""
-        self.TA = false
-    }
-}
-
 class TutorsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var databaseRefer: DatabaseReference!
     var datebaseHandle: DatabaseHandle!
-    
-    let response = [
-        [
-            "name" : "Jose Solorio",
-            "hourly_rate" : 15,
-            "teaching" : "ECS 10",
-            "TA" : false,
-            "grade" : "A"
-        ],
-        [
-            "name" : "Antonio Solorio",
-            "hourly_rate" : 13,
-            "teaching" : "MAT 108",
-            "TA" : true,
-            "grade": nil
-        ],
-        [
-            "name" : "Peter Griffin",
-            "hourly_rate" : 100,
-            "teaching" : "ECS 154",
-            "TA" : true,
-            "grade": nil
-        ]
-    ]
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
     
@@ -66,7 +26,8 @@ class TutorsViewController: UIViewController {
     
     func getTutors(){
         databaseRefer = Database.database().reference()
-        self.databaseRefer.child("tutors").observe(.value, with: { DataSnapshot in
+        let query = self.databaseRefer.child("users").queryOrdered(byChild: "tutor").queryEqual(toValue: true)
+        query.observe(.value, with: { DataSnapshot in
             for child in DataSnapshot.children {
                 let tutor = child as! DataSnapshot
                 self.tutors.append(Tutor(tutor: tutor))
