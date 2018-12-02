@@ -159,9 +159,7 @@
         <!--My Tutor Profile-->
         <scene sceneID="tZv-bF-zeq">
             <objects>
-
                 <viewController storyboardIdentifier="TutorProfileVC" id="R3H-ti-atV" customClass="TutorProfileViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="xYy-Ji-sMq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -674,7 +672,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIb-l8-Fh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87.200000000000003" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="729" y="-666"/>
         </scene>
         <!--Add a Course-->
         <scene sceneID="TgI-3B-mIu">
