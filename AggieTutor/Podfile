@@ -10,5 +10,5 @@ target 'AggieTutor' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SideMenu'
-
+ 
 end
