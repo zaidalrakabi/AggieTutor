@@ -17,7 +17,10 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var reasons: UITextField!
     
     @IBAction func Submit(_ sender: UIButton) {
+        //generate a course information json and add it to the user profile
+        //go back to the dashboard and reload it
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

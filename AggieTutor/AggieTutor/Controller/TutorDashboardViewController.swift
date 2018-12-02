@@ -14,6 +14,7 @@ class TutorDashboardViewController: UICollectionViewController {
         static let courseCell = "CourseCell"
         static let leftAndRightPaddings: CGFloat = 2.0
         static let numberOfItemsPerRow: CGFloat = 3.0
+        static let showDetailVC = "ShowCourseDetails"
     }
     
     override func viewDidLoad() {
@@ -26,12 +27,8 @@ class TutorDashboardViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
     }
     
-
-    /*
-    MARK: - UICollectionViewDataSource
- */
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;//1: the number of courses
+        return 1;//courses.size()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,7 +38,21 @@ class TutorDashboardViewController: UICollectionViewController {
         return cell
     }
     
+    // MARK: - segue to selected course profile
+    //let selectedCourse: Course
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        /*
+         selectedCourse = courses[indexPath.item]
+         performSegue(withIdentifier:Storyboard.showDetailVC, sender:nil)
+         */
         
+    }
+    
+    // MARK: - prepare the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Storyboard.showDetailVC{
+            let detailVC = segue.destination as! ExistedCourseViewController
+            //detailVC.course = selectedCourse
+        }
     }
 }
