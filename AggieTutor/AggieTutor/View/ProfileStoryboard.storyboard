@@ -140,8 +140,17 @@
                                 <action selector="BackPressed:" destination="MvC-GR-R0Z" id="msJ-30-OeP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Ip8-8Y-aqL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Ip8-8Y-aqL">
+                            <connections>
+                                <action selector="EditPressed:" destination="MvC-GR-R0Z" id="wCc-g2-Ve5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="sDC-fX-jWa" id="o83-D8-cGq"/>
+                        <outlet property="password" destination="RH6-nV-iPL" id="mwF-ei-49H"/>
+                        <outlet property="userName" destination="T9Q-Qv-naO" id="kAS-Z3-1zi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWp-Nl-ga4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

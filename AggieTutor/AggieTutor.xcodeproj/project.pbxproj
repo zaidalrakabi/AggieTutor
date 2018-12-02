@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04197BA121B39D4500B79C02 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04197BA021B39D4500B79C02 /* Tutor.swift */; };
 		042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042264C021AF07E600038316 /* StudentDetailsViewController.swift */; };
 		0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */; };
 		0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04197BA021B39D4500B79C02 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
 		042264C021AF07E600038316 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentDetailsViewController.swift; path = AggieTutor/Controller/StudentDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistedCourseViewController.swift; sourceTree = "<group>"; };
 		0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04197B9F21B39D1B00B79C02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04197BA021B39D4500B79C02 /* Tutor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		26824511117B20CDD738DE4A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		E054FCD4219DF277009E0628 /* AggieTutor */ = {
 			isa = PBXGroup;
 			children = (
+				04197B9F21B39D1B00B79C02 /* Models */,
 				E081B1EE21B0A16A00260CD7 /* Controller */,
 				0467B73D21AF57A800F84151 /* Extension.swift */,
 				ED66CF0421B33F8500CA2C4C /* CourseCell.swift */,
@@ -300,6 +311,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -309,6 +321,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04197BA121B39D4500B79C02 /* Tutor.swift in Sources */,
 				0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */,
 				0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */,
 				0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */,
