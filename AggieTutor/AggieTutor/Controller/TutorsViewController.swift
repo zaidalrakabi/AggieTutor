@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 
 class Tutor {
     var name = ""
@@ -14,18 +16,21 @@ class Tutor {
     var teaching = ""
     var grade = ""
     var TA = false
-    init(name: String, hw: Int, teaching: String , grade: String, TA : Bool) {
-        self.name = name
-        self.hourly_wage = hw
-        self.teaching = teaching
-        self.grade = grade
-        self.TA = TA
+    init(tutor: DataSnapshot) {
+        let td = tutor.value as? [String: Any] ?? [:]
+        self.name = td["name"] as? String ?? ""
+        self.hourly_wage = td["hourly_rate"] as? Int ?? 0
+        self.teaching = td["class"] as? String ?? ""
+        self.TA = false
     }
 }
 
 class TutorsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    var databaseRefer: DatabaseReference!
+    var datebaseHandle: DatabaseHandle!
     
     let response = [
         [
@@ -60,19 +65,24 @@ class TutorsViewController: UIViewController {
     }
     
     func getTutors(){
-        for tutor in response {
-            let name:String = tutor["name"] as? String ?? ""
-            let hw:Int = tutor["hourly_rate"] as? Int ?? 0
-            let teaching:String = tutor["teaching"] as? String ?? "<ERROR>"
-            let grade:String = tutor["grade"] as? String ?? ""
-            let TA:Bool = tutor["TA"] as? Bool ?? false
-            tutors.append(Tutor(name: name, hw: hw, teaching: teaching, grade: grade, TA: TA))
-        }
-        curTutors = tutors
+        databaseRefer = Database.database().reference()
+        self.databaseRefer.child("tutors").observe(.value, with: { DataSnapshot in
+            for child in DataSnapshot.children {
+                let tutor = child as! DataSnapshot
+                self.tutors.append(Tutor(tutor: tutor))
+            }
+                DispatchQueue.main.async{
+                self.curTutors = self.tutors
+                self.tableView.reloadData()
+            }
+        })
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         getTutors()
+        print("finished loading")
         // Do any additional setup after loading the view.
     }
 }

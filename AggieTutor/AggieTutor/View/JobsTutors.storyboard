@@ -304,9 +304,6 @@
                                                     <state key="normal" title="Details">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="ShowDetails:" destination="5k7-xu-xgC" eventType="touchUpInside" id="7IW-uJ-wTj"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
