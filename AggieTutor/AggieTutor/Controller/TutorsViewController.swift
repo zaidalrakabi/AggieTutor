@@ -18,6 +18,13 @@ class TutorsViewController: UIViewController {
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
     
+    //Pass variables to detailed view when selected
+    var nameToPass: String!
+    var hourlyRateToPass: String!
+    var classTeachingToPass: String!
+    var qualificationsToPass: String!
+    
+    
     @IBAction func GoToJobs(_ sender: Any) {
         let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
         let JobsVC = storyboard.instantiateViewController(withIdentifier: "JobsVC")
@@ -80,9 +87,33 @@ extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
         let tutor = curTutors[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TutorCell") as! TutorCell
         cell.setTutor(tutor: tutor)
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath) as! TutorCell
+        
+        nameToPass = currentCell.TutorNameLabel.text
+        print("Name added")
+        hourlyRateToPass = currentCell.RateLabel.text
+        classTeachingToPass = currentCell.ClassLabel.text
+        qualificationsToPass = currentCell.QualificationsLabel.text
+        
+        //self.performSegue(withIdentifier: "ShowDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail"{
+            let DetailCellController = segue.destination as! TutorCellDetailViewController
+                
+            DetailCellController.name = nameToPass
+            DetailCellController.hourlyRate = hourlyRateToPass
+            DetailCellController.classTeaching = classTeachingToPass
+            DetailCellController.qualifications = qualificationsToPass
+        }
+    }
     
 }
 
@@ -90,7 +121,6 @@ class TutorCell: UITableViewCell{
     @IBOutlet weak var TutorNameLabel: UILabel!
     @IBOutlet weak var RateLabel: UILabel!
     @IBOutlet weak var QualificationsLabel: UILabel!
-    @IBOutlet weak var GoToDetails: UIButton!
     @IBOutlet weak var ClassLabel: UILabel!
     
     func setTutor(tutor: Tutor){
@@ -109,4 +139,5 @@ class TutorCell: UITableViewCell{
         let grade = tutor.grade
         QualificationsLabel.text = "Grade: \(grade),   TA: \(TA)"
     }
+    
 }
