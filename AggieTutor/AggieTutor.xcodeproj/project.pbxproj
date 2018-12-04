@@ -33,6 +33,7 @@
 		E0700E0C21B355B800C89B34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0B21B355B800C89B34 /* ProfileViewController.swift */; };
 		E0700E0E21B4AF3C00C89B34 /* TutorCellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0D21B4AF3C00C89B34 /* TutorCellDetailViewController.swift */; };
 		E4784A53FC6F916287B97A4D /* Pods_AggieTutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FC3AE35DC71A44ABF4E837 /* Pods_AggieTutor.framework */; };
+		EC2889EB21B638B4004B8C43 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2889EA21B638B4004B8C43 /* MapViewController.swift */; };
 		ECAEE64D219DF62D0058302B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64C219DF62D0058302B /* Dashboard.storyboard */; };
 		ECAEE64F219DF64B0058302B /* JobsTutors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */; };
 		ECAEE651219DF65C0058302B /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAEE650219DF65C0058302B /* Request.storyboard */; };
@@ -74,6 +75,7 @@
 		E0700E0921B34B2200C89B34 /* MyJobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyJobs.storyboard; sourceTree = "<group>"; };
 		E0700E0B21B355B800C89B34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E0700E0D21B4AF3C00C89B34 /* TutorCellDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCellDetailViewController.swift; sourceTree = "<group>"; };
+		EC2889EA21B638B4004B8C43 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECAEE64C219DF62D0058302B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		ECAEE64E219DF64B0058302B /* JobsTutors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = JobsTutors.storyboard; path = AggieTutor/View/JobsTutors.storyboard; sourceTree = SOURCE_ROOT; };
 		ECAEE650219DF65C0058302B /* Request.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Request.storyboard; path = AggieTutor/View/Request.storyboard; sourceTree = SOURCE_ROOT; };
@@ -174,6 +176,7 @@
 				0467B73F21AF57A800F84151 /* TutorDashboardViewController.swift */,
 				0497E74A21A5F4A000D3A736 /* JobsViewController.swift */,
 				0497E74621A5F3CF00D3A736 /* TutorsViewController.swift */,
+				EC2889EA21B638B4004B8C43 /* MapViewController.swift */,
 				042264C021AF07E600038316 /* StudentDetailsViewController.swift */,
 				E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */,
 				E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */,
@@ -351,6 +354,7 @@
 				0467B75121AF57A900F84151 /* HomeViewController.swift in Sources */,
 				E0700E0C21B355B800C89B34 /* ProfileViewController.swift in Sources */,
 				E054FCD8219DF277009E0628 /* MainViewController.swift in Sources */,
+				EC2889EB21B638B4004B8C43 /* MapViewController.swift in Sources */,
 				E0700E0E21B4AF3C00C89B34 /* TutorCellDetailViewController.swift in Sources */,
 				E0700E0621B3476300C89B34 /* SideMenuTableViewController.swift in Sources */,
 				042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */,
