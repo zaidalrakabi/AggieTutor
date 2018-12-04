@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class TutorDashboardViewController: UICollectionViewController {
     
@@ -15,6 +15,7 @@ class TutorDashboardViewController: UICollectionViewController {
     var databaseRefer: DatabaseReference!
     var datebaseHandle: DatabaseHandle!
     var courses = [Course]()
+    var curCourses = [Course]()
     
     struct Storyboard {
         static let courseCell = "courseCell"
@@ -26,11 +27,20 @@ class TutorDashboardViewController: UICollectionViewController {
     // MARK: - get tutor courses for a user
     func getCourses(){
         databaseRefer = Database.database().reference()
-        let query = self.databaseRefer.child("users").child("jlsolorio").child("teaching")
+        let dataRef = self.databaseRefer.child("users")
+        let data2Ref = dataRef.child("jlsolorio")
+        let query = data2Ref.child("teaching")
+        
         query.observe(.value, with: { DataSnapshot in
             for child in DataSnapshot.children {
                 let course = child as! DataSnapshot
                 self.courses.append(Course(course: course))
+                
+                print("\(course)")
+            }
+            DispatchQueue.main.async {
+                self.curCourses = self.courses
+                self.collectionView.reloadData()
             }
         })
     }
@@ -46,6 +56,7 @@ class TutorDashboardViewController: UICollectionViewController {
         navigationItem.rightBarButtonItems?.append(editButtonItem)
         
         getCourses()
+        print("done loading")
     }
     
     // MARK: - number of courses
@@ -69,6 +80,7 @@ class TutorDashboardViewController: UICollectionViewController {
     var reason: String = ""
     var quarter: String = ""
     var hourrate: Int = 0
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         name = courses[indexPath.item].course_name
         grade = courses[indexPath.item].grade
