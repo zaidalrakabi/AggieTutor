@@ -39,6 +39,7 @@
 		ECFFACE2219DF98D00E581DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE1219DF98D00E581DD /* GoogleService-Info.plist */; };
 		ECFFACE4219DFA5A00E581DD /* Images in Resources */ = {isa = PBXBuildFile; fileRef = ECFFACE3219DFA5A00E581DD /* Images */; };
 		ED66CF0521B33F8500CA2C4C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66CF0421B33F8500CA2C4C /* CourseCell.swift */; };
+		ED66CF0721B4945600CA2C4C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66CF0621B4945600CA2C4C /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		ECFFACE3219DFA5A00E581DD /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = Assets.xcassets/Images; sourceTree = "<group>"; };
 		ECFFACE9219DFAD600E581DD /* uc-davis-aggies-7-logo-png-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uc-davis-aggies-7-logo-png-transparent.png"; sourceTree = "<group>"; };
 		ED66CF0421B33F8500CA2C4C /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = AggieTutor/CourseCell.swift; sourceTree = SOURCE_ROOT; };
+		ED66CF0621B4945600CA2C4C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		04197B9F21B39D1B00B79C02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED66CF0621B4945600CA2C4C /* Course.swift */,
 				04197BA021B39D4500B79C02 /* Tutor.swift */,
 			);
 			path = Models;
@@ -351,6 +354,7 @@
 				0467B74D21AF57A900F84151 /* MenuViewController.swift in Sources */,
 				E054FCD6219DF277009E0628 /* AppDelegate.swift in Sources */,
 				0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */,
+				ED66CF0721B4945600CA2C4C /* Course.swift in Sources */,
 				ED66CF0521B33F8500CA2C4C /* CourseCell.swift in Sources */,
 				0467B74921AF57A900F84151 /* SignUpViewController.swift in Sources */,
 				0497E74721A5F3CF00D3A736 /* TutorsViewController.swift in Sources */,

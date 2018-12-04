@@ -9,6 +9,7 @@
 import UIKit
 
 class CourseCell: UICollectionViewCell {
+    
     @IBOutlet weak var courseName: UILabel!
     
     @IBOutlet weak var deleteButtonBackgroundView: UIVisualEffectView!
@@ -25,10 +26,6 @@ class CourseCell: UICollectionViewCell {
         didSet{
             deleteButtonBackgroundView.isHidden = !isEditing
         }
-    }
-    
-    @IBAction func deleteButton(_ sender: Any) {
-        
     }
     
 }

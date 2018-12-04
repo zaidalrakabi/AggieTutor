@@ -7,14 +7,32 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TutorDashboardViewController: UICollectionViewController {
     
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+    var databaseRefer: DatabaseReference!
+    var datebaseHandle: DatabaseHandle!
+    var courses = [Course]()
+    
     struct Storyboard {
-        static let courseCell = "CourseCell"
+        static let courseCell = "courseCell"
         static let leftAndRightPaddings: CGFloat = 2.0
         static let numberOfItemsPerRow: CGFloat = 3.0
         static let showDetailVC = "ShowCourseDetails"
+    }
+    
+    // MARK: - get tutor courses for a user
+    func getCourses(){
+        databaseRefer = Database.database().reference()
+        let query = self.databaseRefer.child("users").child("jlsolorio").child("teaching")
+        query.observe(.value, with: { DataSnapshot in
+            for child in DataSnapshot.children {
+                let course = child as! DataSnapshot
+                self.courses.append(Course(course: course))
+            }
+        })
     }
     
     override func viewDidLoad() {
@@ -25,34 +43,65 @@ class TutorDashboardViewController: UICollectionViewController {
         
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        navigationItem.rightBarButtonItems?.append(editButtonItem)
+        
+        getCourses()
     }
     
+    // MARK: - number of courses
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;//courses.size()
+        print(courses.count)
+        return courses.count;
     }
     
+    //MARK: - generate courses dashboard view
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.courseCell, for: indexPath) as! CourseCell
         
-        cell.courseName.text! = "ECS189E"//"to-be-set": courses[indexPath.item].name
+        cell.courseName.text! = courses[indexPath.item].course_name
         return cell
     }
     
     // MARK: - segue to selected course profile
-    //let selectedCourse: Course
+    var name: String = ""
+    var grade: String = ""
+    var instructor: String = ""
+    var reason: String = ""
+    var quarter: String = ""
+    var hourrate: Int = 0
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        /*
-         selectedCourse = courses[indexPath.item]
-         performSegue(withIdentifier:Storyboard.showDetailVC, sender:nil)
-         */
-        
+        name = courses[indexPath.item].course_name
+        grade = courses[indexPath.item].grade
+        instructor = courses[indexPath.item].instructor
+        reason = courses[indexPath.item].reason
+        quarter = courses[indexPath.item].quarter
+        hourrate = courses[indexPath.item].hourly_wage
+        performSegue(withIdentifier:Storyboard.showDetailVC, sender:nil)
+    }
+    
+    // MARK: - Delete button effect
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        addBarButtonItem.isEnabled = !editing
+        if let indexPaths = collectionView?.indexPathsForVisibleItems{
+            for indexPath in indexPaths {
+                if let cell = collectionView?.cellForItem(at: indexPath) as? CourseCell{
+                    cell.isEditing = editing
+                }
+            }
+        }
     }
     
     // MARK: - prepare the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Storyboard.showDetailVC{
             let detailVC = segue.destination as! ExistedCourseViewController
-            //detailVC.course = selectedCourse
+            detailVC.course.text = name
+            detailVC.quarterCompleted.text = quarter
+            detailVC.grade.text = grade
+            detailVC.professor.text = instructor
+            detailVC.reasons.text = reason
+            detailVC.hourrate.text = String(hourrate)
         }
     }
 }
