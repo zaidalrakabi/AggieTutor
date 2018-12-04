@@ -14,13 +14,14 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 1000
-    let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
+    //let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.follow, animated: true)
         let address1 = "Howard Way, Davis, CA,  USA"
         addAnnotationAtAddress(address: address1, title: "MU")
-        centerMapOnLocation(location: centerLocation)
+        //centerMapOnLocation(location: centerLocation)
     }
     
     let regionRadius: CLLocationDistance = 1000
