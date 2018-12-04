@@ -18,12 +18,6 @@ class TutorsViewController: UIViewController {
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
     
-    //Pass variables to detailed view when selected
-    var nameToPass: String!
-    var hourlyRateToPass: String!
-    var classTeachingToPass: String!
-    var qualificationsToPass: String!
-    
     
     @IBAction func GoToJobs(_ sender: Any) {
         let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
@@ -86,33 +80,10 @@ extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
         print("Creating TableCell\n")
         let tutor = curTutors[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TutorCell") as! TutorCell
+        cell.navigationController = self.navigationController;
         cell.setTutor(tutor: tutor)
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow!
-        let currentCell = tableView.cellForRow(at: indexPath) as! TutorCell
-        
-        nameToPass = currentCell.TutorNameLabel.text
-        print("Name added")
-        hourlyRateToPass = currentCell.RateLabel.text
-        classTeachingToPass = currentCell.ClassLabel.text
-        qualificationsToPass = currentCell.QualificationsLabel.text
-        
-        //self.performSegue(withIdentifier: "ShowDetail", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetail"{
-            let DetailCellController = segue.destination as! TutorCellDetailViewController
-                
-            DetailCellController.name = nameToPass
-            DetailCellController.hourlyRate = hourlyRateToPass
-            DetailCellController.classTeaching = classTeachingToPass
-            DetailCellController.qualifications = qualificationsToPass
-        }
     }
     
 }
@@ -122,7 +93,19 @@ class TutorCell: UITableViewCell{
     @IBOutlet weak var RateLabel: UILabel!
     @IBOutlet weak var QualificationsLabel: UILabel!
     @IBOutlet weak var ClassLabel: UILabel!
+    var navigationController:UINavigationController! = nil
     
+    @IBAction func GoToDetails(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "TutorDetailVC") as! TutorCellDetailViewController
+        VC.name = TutorNameLabel.text
+        VC.hourlyRate = RateLabel.text
+        VC.classTeaching = ClassLabel.text
+        VC.qualifications = QualificationsLabel.text
+        
+        self.navigationController.pushViewController(VC, animated: true)
+        
+    }
     func setTutor(tutor: Tutor){
         //Get Name
         TutorNameLabel.text = tutor.name

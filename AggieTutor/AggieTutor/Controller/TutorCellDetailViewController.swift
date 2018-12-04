@@ -21,6 +21,10 @@ class TutorCellDetailViewController: UIViewController {
     @IBOutlet weak var setclassTeaching: UITextField!
     @IBOutlet weak var setqualifications: UITextField!
     
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var HRLabel: UILabel!
+    @IBOutlet weak var ClassLabel: UILabel!
+    @IBOutlet weak var QualificationLabel: UILabel!
     @IBAction func RequestPressed(_ sender: Any) {
         
     }
