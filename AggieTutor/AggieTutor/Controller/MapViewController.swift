@@ -17,20 +17,20 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mapView.showsUserLocation = true
         let address1 = "Howard Way, Davis, CA,  USA"
         addAnnotationAtAddress(address: address1, title: "MU")
         centerMapOnLocation(location: centerLocation)
     }
-
+    
     let regionRadius: CLLocationDistance = 1000
-
+    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-
+    
     
     
     // add an Annotation with a coordinate: CLLocationCoordinate2D
