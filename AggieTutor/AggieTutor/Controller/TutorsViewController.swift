@@ -18,6 +18,7 @@ class TutorsViewController: UIViewController {
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
     
+    
     @IBAction func GoToJobs(_ sender: Any) {
         let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
         let JobsVC = storyboard.instantiateViewController(withIdentifier: "JobsVC")
@@ -79,10 +80,11 @@ extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
         print("Creating TableCell\n")
         let tutor = curTutors[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TutorCell") as! TutorCell
+        cell.navigationController = self.navigationController;
         cell.setTutor(tutor: tutor)
+        
         return cell
     }
-    
     
 }
 
@@ -90,9 +92,20 @@ class TutorCell: UITableViewCell{
     @IBOutlet weak var TutorNameLabel: UILabel!
     @IBOutlet weak var RateLabel: UILabel!
     @IBOutlet weak var QualificationsLabel: UILabel!
-    @IBOutlet weak var GoToDetails: UIButton!
     @IBOutlet weak var ClassLabel: UILabel!
+    var navigationController:UINavigationController! = nil
     
+    @IBAction func GoToDetails(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "TutorDetailVC") as! TutorCellDetailViewController
+        VC.name = TutorNameLabel.text
+        VC.hourlyRate = RateLabel.text
+        VC.classTeaching = ClassLabel.text
+        VC.qualifications = QualificationsLabel.text
+        
+        self.navigationController.pushViewController(VC, animated: true)
+        
+    }
     func setTutor(tutor: Tutor){
         //Get Name
         TutorNameLabel.text = tutor.name
@@ -109,4 +122,5 @@ class TutorCell: UITableViewCell{
         let grade = tutor.grade
         QualificationsLabel.text = "Grade: \(grade),   TA: \(TA)"
     }
+    
 }

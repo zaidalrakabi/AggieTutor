@@ -24,8 +24,13 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if Auth.auth().currentUser != nil {
+            userName.text = Auth.auth().currentUser?.displayName
+            email.text = Auth.auth().currentUser?.email
+        }
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
