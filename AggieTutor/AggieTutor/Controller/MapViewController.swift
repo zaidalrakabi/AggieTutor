@@ -22,15 +22,31 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         mapView.showsUserLocation = true
         
         let address1 = "Howard Way, Davis, CA,  USA"
-        addAnnotationAtAddress(address: address1, title: "MU")
+        let address2 = "420 Hutchison Dr, Davis, CA 95616"
+        addAnnotationAtAddress(address: address1, title: "John McSomethin", subtitle: "ECS 40, ECS 10")
+        addAnnotationAtAddress(address: address2, title: "MJ Blaze", subtitle: "ECS 20,  ECS 150, MAT 108")
         mapView.setUserTrackingMode(.follow, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let uID = Auth.auth().currentUser!.uid
         ref = Database.database().reference()
-        ref.child("users/\(uID)/longitude").setValue(mapView.userLocation.coordinate.latitude.description)
-        ref.child("users/\(uID)/latitude").setValue(mapView.userLocation.coordinate.longitude.description)
+        let loc = locationManager.location!.coordinate
+        ref.child("users/\(uID)/longitude").setValue(loc.latitude.description)
+        ref.child("users/\(uID)/latitude").setValue(loc.longitude.description)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        //Check if annotation is userLocation
+        if(annotation.isEqual(mapView.userLocation))
+        {
+            //Bail
+            return nil
+        }
+        let view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "marker")
+        view.canShowCallout = true
+        view.rightCalloutAccessoryView = UIButton(type: .infoLight)
+        return view
     }
     
     // add an Annotation with a coordinate: CLLocationCoordinate2D
@@ -42,7 +58,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     }
     
     // add an annotation with an address: String
-    func addAnnotationAtAddress(address: String, title: String) {
+    func addAnnotationAtAddress(address: String, title: String, subtitle: String) {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address) { (placemarks, error) in
             if let placemarks = placemarks {
@@ -51,6 +67,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
                     let annotation = MKPointAnnotation()
                     annotation.coordinate = coordinate.coordinate
                     annotation.title = title
+                    annotation.subtitle = subtitle
                     self.mapView.addAnnotation(annotation)
                 }
             }
