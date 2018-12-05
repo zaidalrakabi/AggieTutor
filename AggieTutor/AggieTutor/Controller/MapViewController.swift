@@ -8,31 +8,30 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
+import FirebaseAuth
 
 class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate  {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 1000
+    var ref: DatabaseReference!
     //let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.follow, animated: true)
+        
         let address1 = "Howard Way, Davis, CA,  USA"
         addAnnotationAtAddress(address: address1, title: "MU")
-        //centerMapOnLocation(location: centerLocation)
+        mapView.setUserTrackingMode(.follow, animated: true)
     }
     
-    let regionRadius: CLLocationDistance = 1000
-    
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let uID = Auth.auth().currentUser!.uid
+        ref = Database.database().reference()
+        ref.child("users/\(uID)/longitude").setValue(mapView.userLocation.coordinate.latitude.description)
+        ref.child("users/\(uID)/latitude").setValue(mapView.userLocation.coordinate.longitude.description)
     }
-    
-    
     
     // add an Annotation with a coordinate: CLLocationCoordinate2D
     func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D) {
