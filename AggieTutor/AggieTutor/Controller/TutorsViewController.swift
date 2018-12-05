@@ -53,9 +53,6 @@ class TutorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(!tutors.isEmpty){
-            tutors.removeAll(keepingCapacity: false)
-        }
         if(!loaded){
             getTutors()
             loaded = true

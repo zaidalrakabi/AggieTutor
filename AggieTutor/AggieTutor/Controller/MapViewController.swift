@@ -11,6 +11,30 @@ import CoreLocation
 import FirebaseDatabase
 import FirebaseAuth
 
+class TutorAnnotation:MKPointAnnotation{
+    var tutor:Tutor!
+    var button = UIButton(type: .infoLight)
+    var navigationController: UINavigationController!
+    init(tutor: Tutor, nav:UINavigationController) {
+        super.init()
+        self.navigationController = nav
+        self.title = tutor.name
+        self.subtitle = tutor.teaching
+        self.coordinate = CLLocation(latitude: tutor.lat, longitude: tutor.long).coordinate
+        self.tutor = tutor
+        self.button.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+    }
+    @objc func clicked(){
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TutorDetailVC") as! TutorCellDetailViewController
+        vc.name = tutor.name
+        vc.hourlyRate = "\(tutor.hourly_wage)"
+        vc.classTeaching = tutor.teaching
+        vc.qualifications = tutor.grade
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
+
 class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate  {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -22,12 +46,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         super.viewDidLoad()
         mapView.showsUserLocation = true
         for tutor in curTutors{
-            let annotation = MKPointAnnotation()
-            print(tutor.long)
-            annotation.coordinate = CLLocation(latitude: tutor.lat, longitude: tutor.long).coordinate
-            annotation.title = tutor.name
-            annotation.subtitle = tutor.teaching
-            self.mapView.addAnnotation(annotation)
+            self.mapView.addAnnotation(TutorAnnotation(tutor: tutor, nav: self.navigationController!))
         }
         mapView.setUserTrackingMode(.follow, animated: true)
     }
@@ -48,10 +67,10 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         }
         let view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "marker")
         view.canShowCallout = true
-        view.rightCalloutAccessoryView = UIButton(type: .infoLight)
+        let tutorAnnotation = annotation as! TutorAnnotation
+        view.rightCalloutAccessoryView = tutorAnnotation.button
         return view
     }
-    
     // add an Annotation with a coordinate: CLLocationCoordinate2D
     func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D) {
         let annotation = MKPointAnnotation()
