@@ -43,8 +43,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         //Check if annotation is userLocation
         if(annotation.isEqual(mapView.userLocation))
-        {
-            //Bail
+        {   //Bail
             return nil
         }
         let view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "marker")
