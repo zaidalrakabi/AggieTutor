@@ -42,8 +42,9 @@ class TutorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        getTutors()
+        if(tutors.isEmpty){
+            getTutors()
+        }
         print("finished loading")
         // Do any additional setup after loading the view.
     }
