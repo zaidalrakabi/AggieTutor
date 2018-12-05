@@ -80,12 +80,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eZI-vz-GUe"/>
                     </view>
-                    <connections>
-                        <outlet property="email" destination="Rvs-cw-HHy" id="kOW-4l-bKf"/>
-                        <outlet property="name" destination="l3Q-f7-yT4" id="ZXX-HV-GWu"/>
-                        <outlet property="status" destination="PBg-pU-p9J" id="zbl-se-UbY"/>
-                        <outlet property="tableView" destination="m11-Pf-IT4" id="CFc-87-jaX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFt-GH-y2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +87,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="in-progress-50" width="37.5" height="37.5"/>
-        <image name="teacher-hiring-100" width="75" height="75"/>
+        <image name="in-progress-50" width="50" height="50"/>
+        <image name="teacher-hiring-100" width="100" height="100"/>
     </resources>
 </document>
