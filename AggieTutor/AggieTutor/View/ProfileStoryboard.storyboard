@@ -373,7 +373,6 @@
                                 <connections>
                                     <outlet property="courseName" destination="U1d-ZG-xhA" id="rsv-O3-fEV"/>
                                     <outlet property="deleteButtonBackgroundView" destination="adS-q4-vEe" id="Ffv-P6-XBE"/>
-                                    <segue destination="m8u-NQ-BbJ" kind="show" identifier="ShowCourseDetails" id="Bkf-6c-pI2"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -391,6 +390,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addBarButtonItem" destination="8IV-6S-dxa" id="gOs-Z2-qUS"/>
+                        <segue destination="m8u-NQ-BbJ" kind="show" identifier="ShowCourseDetails" id="L1L-6u-IpL"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mv-RC-5dO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,8 +564,8 @@
         <!--Existed Course View Controller-->
         <scene sceneID="OQf-GV-48e">
             <objects>
-                <viewController id="m8u-NQ-BbJ" customClass="ExistedCourseViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lSB-Q8-F1a">
+                <viewController restorationIdentifier="DetailsVC" storyboardIdentifier="DetailsVC" id="m8u-NQ-BbJ" customClass="ExistedCourseViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DetailsVC" id="lSB-Q8-F1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
