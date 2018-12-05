@@ -14,17 +14,21 @@ import FirebaseAuth
 class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate  {
     
     @IBOutlet weak var mapView: MKMapView!
+    var curTutors = [Tutor]()
     let locationManager = CLLocationManager()
     var ref: DatabaseReference!
     //let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.showsUserLocation = true
-        
-        let address1 = "Howard Way, Davis, CA,  USA"
-        let address2 = "420 Hutchison Dr, Davis, CA 95616"
-        addAnnotationAtAddress(address: address1, title: "John McSomethin", subtitle: "ECS 40, ECS 10")
-        addAnnotationAtAddress(address: address2, title: "MJ Blaze", subtitle: "ECS 20,  ECS 150, MAT 108")
+        for tutor in curTutors{
+            let annotation = MKPointAnnotation()
+            print(tutor.long)
+            annotation.coordinate = CLLocation(latitude: tutor.lat, longitude: tutor.long).coordinate
+            annotation.title = tutor.name
+            annotation.subtitle = tutor.teaching
+            self.mapView.addAnnotation(annotation)
+        }
         mapView.setUserTrackingMode(.follow, animated: true)
     }
     
@@ -32,8 +36,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         let uID = Auth.auth().currentUser!.uid
         ref = Database.database().reference()
         let loc = locationManager.location!.coordinate
-        ref.child("users/\(uID)/longitude").setValue(loc.latitude.description)
-        ref.child("users/\(uID)/latitude").setValue(loc.longitude.description)
+        ref.child("users/\(uID)/longitude").setValue(Double(loc.longitude.description))
+        ref.child("users/\(uID)/latitude").setValue(Double(loc.latitude.description))
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

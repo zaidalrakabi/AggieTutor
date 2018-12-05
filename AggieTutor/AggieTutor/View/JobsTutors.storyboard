@@ -12,22 +12,17 @@
         <!--Map View Controller-->
         <scene sceneID="opu-A6-ppA">
             <objects>
-                <viewController id="Ke2-Qy-jty" customClass="MapViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ke2-Qy-jty" customClass="MapViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7A-D3-PYG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-J9-7Jf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ke2-Qy-jty" id="H61-jh-wpA"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-o5-7lT">
-                                <rect key="frame" x="313" y="617" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Center"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -76,7 +71,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ke2-Qy-jty" kind="show" id="IjV-zq-zKl"/>
+                                    <action selector="showNearMe:" destination="tnd-vi-n0n" eventType="touchUpInside" id="2PP-dx-2bD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-ha-aGt">
@@ -581,6 +576,6 @@
     </scenes>
     <resources>
         <image name="INeedATutor" width="1000" height="1080"/>
-        <image name="IWantToTutor" width="595.20001220703125" height="595.20001220703125"/>
+        <image name="IWantToTutor" width="2480" height="2480"/>
     </resources>
 </document>

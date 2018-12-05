@@ -25,6 +25,12 @@ class TutorsViewController: UIViewController {
         self.navigationController?.pushViewController(JobsVC, animated: true)
     }
     
+    @IBAction func showNearMe(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let MapVC = storyboard.instantiateViewController(withIdentifier: "MapVC") as! MapViewController
+        MapVC.curTutors = self.curTutors
+        self.navigationController?.pushViewController(MapVC, animated: true)
+    }
     func getTutors(){
         databaseRefer = Database.database().reference()
         let query = self.databaseRefer.child("users").queryOrdered(byChild: "tutor").queryEqual(toValue: true)
@@ -42,9 +48,10 @@ class TutorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(tutors.isEmpty){
-            getTutors()
+        if(!tutors.isEmpty){
+            tutors.removeAll(keepingCapacity: false)
         }
+        getTutors()
         print("finished loading")
         // Do any additional setup after loading the view.
     }
