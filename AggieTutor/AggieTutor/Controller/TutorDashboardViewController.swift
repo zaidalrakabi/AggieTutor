@@ -28,7 +28,7 @@ class TutorDashboardViewController: UICollectionViewController {
     func getCourses(){
         databaseRefer = Database.database().reference()
         let dataRef = self.databaseRefer.child("users")
-        let data2Ref = dataRef.child("jlsolorio")
+        let data2Ref = dataRef.child("IiIOoOuRDigS5AZeQNQ6VFOPszJ2")
         let query = data2Ref.child("teaching")
         
         query.observe(.value, with: { DataSnapshot in
@@ -73,24 +73,36 @@ class TutorDashboardViewController: UICollectionViewController {
         return cell
     }
     
-    // MARK: - segue to selected course profile
-    var name: String = ""
-    var grade: String = ""
-    var instructor: String = ""
-    var reason: String = ""
-    var quarter: String = ""
-    var hourrate: Int = 0
     
+    // MARK: - segue to selected course profile
+    var index = 0
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        name = courses[indexPath.item].course_name
-        grade = courses[indexPath.item].grade
-        instructor = courses[indexPath.item].instructor
-        reason = courses[indexPath.item].reason
-        quarter = courses[indexPath.item].quarter
-        hourrate = courses[indexPath.item].hourly_wage
-        performSegue(withIdentifier:Storyboard.showDetailVC, sender:nil)
+//        let detailstoryboard = UIStoryboard(name: "ProfileStoryboard", bundle: nil)
+//        let VC = detailstoryboard.instantiateViewController(withIdentifier:"DetailsVC") as! ExistedCourseViewController
+//        VC.course.text = courses[indexPath.item].course_name
+//        VC.grade.text = courses[indexPath.item].grade
+//        VC.professor.text = courses[indexPath.item].instructor
+//        VC.reasons.text = courses[indexPath.item].reason
+//        VC.quarterCompleted.text = courses[indexPath.item].quarter
+//        VC.hourrate.text = String(courses[indexPath.item].hourly_wage)
+        index = indexPath.row
+        performSegue(withIdentifier: "ShowCourseDetails", sender: self)
+    
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Storyboard.showDetailVC{
+            let detailVC = segue.destination as! ExistedCourseViewController
+            detailVC.inputData = courses[index]
+//            detailVC.course.text = name
+//            detailVC.quarterCompleted.text = quarter
+//            detailVC.grade.text = grade
+//            detailVC.professor.text = instructor
+//            detailVC.reasons.text = reason
+//            detailVC.hourrate.text = String(hourrate)
+        }
+    }
+ 
     // MARK: - Delete button effect
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
@@ -101,19 +113,6 @@ class TutorDashboardViewController: UICollectionViewController {
                     cell.isEditing = editing
                 }
             }
-        }
-    }
-    
-    // MARK: - prepare the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Storyboard.showDetailVC{
-            let detailVC = segue.destination as! ExistedCourseViewController
-            detailVC.course.text = name
-            detailVC.quarterCompleted.text = quarter
-            detailVC.grade.text = grade
-            detailVC.professor.text = instructor
-            detailVC.reasons.text = reason
-            detailVC.hourrate.text = String(hourrate)
         }
     }
 }

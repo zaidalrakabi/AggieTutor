@@ -18,6 +18,10 @@ class Course {
     var reason = ""
     var instructor = ""
     
+    init(){
+        
+    }
+    
     init(course: DataSnapshot) {
         let td = course.value as? [String: Any] ?? [:]
         self.course_name = td["course_name"] as? String ?? ""

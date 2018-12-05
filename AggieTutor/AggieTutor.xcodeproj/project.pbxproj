@@ -27,6 +27,7 @@
 		E054FCDB219DF277009E0628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCD9219DF277009E0628 /* Main.storyboard */; };
 		E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDC219DF278009E0628 /* Assets.xcassets */; };
 		E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */; };
+		E06DD1B421B6587400C6AE6B /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD1B321B6587400C6AE6B /* Jobs.swift */; };
 		E0700E0621B3476300C89B34 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */; };
 		E0700E0821B34AF700C89B34 /* MyJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */; };
 		E0700E0A21B34B2200C89B34 /* MyJobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0700E0921B34B2200C89B34 /* MyJobs.storyboard */; };
@@ -70,6 +71,7 @@
 		E054FCDC219DF278009E0628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E06DD1B321B6587400C6AE6B /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 		E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJobsViewController.swift; sourceTree = "<group>"; };
 		E0700E0921B34B2200C89B34 /* MyJobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyJobs.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				ED66CF0621B4945600CA2C4C /* Course.swift */,
 				04197BA021B39D4500B79C02 /* Tutor.swift */,
+				E06DD1B321B6587400C6AE6B /* Jobs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				04197BA121B39D4500B79C02 /* Tutor.swift in Sources */,
 				0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */,
 				0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */,
+				E06DD1B421B6587400C6AE6B /* Jobs.swift in Sources */,
 				0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */,
 				0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */,
 				0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */,
@@ -515,7 +519,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JU8ZXJAN7H;
+				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HASR6L4H4B;
 				INFOPLIST_FILE = AggieTutor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,7 +540,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JU8ZXJAN7H;
+				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HASR6L4H4B;
 				INFOPLIST_FILE = AggieTutor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

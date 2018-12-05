@@ -10,6 +10,12 @@ import UIKit
 
 class MyJobsViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var status: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
