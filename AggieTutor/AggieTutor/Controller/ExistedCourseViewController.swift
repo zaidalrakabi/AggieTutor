@@ -11,7 +11,7 @@ import UIKit
 class ExistedCourseViewController: UIViewController {
 
     
-    var inputData = Course()
+    var inputData:Course!
     
     @IBOutlet weak var course: UITextField!
     @IBOutlet weak var quarterCompleted: UITextField!
