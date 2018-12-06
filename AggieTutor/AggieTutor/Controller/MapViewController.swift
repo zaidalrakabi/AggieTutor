@@ -17,6 +17,8 @@ class TutorAnnotation:MKPointAnnotation{
     var navigationController: UINavigationController!
     init(tutor: Tutor, nav:UINavigationController) {
         super.init()
+        let img = UIImage(named: "right_arrow")
+        self.button.setImage(img, for: .normal)
         self.navigationController = nav
         self.title = tutor.name
         self.subtitle = tutor.teaching
@@ -69,6 +71,8 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
         view.canShowCallout = true
         let tutorAnnotation = annotation as! TutorAnnotation
         view.rightCalloutAccessoryView = tutorAnnotation.button
+        view.glyphImage = UIImage(named: "person_pin")
+        view.markerTintColor = UIColor(named: "blue")
         return view
     }
     // add an Annotation with a coordinate: CLLocationCoordinate2D
