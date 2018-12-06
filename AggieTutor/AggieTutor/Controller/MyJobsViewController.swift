@@ -51,6 +51,8 @@ class MyJobsViewController: UIViewController {
         tableView.rowHeight = 100
         getStudents()
         print("Finished Loading")
+        
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         // Do any additional setup after loading the view.
         
     }
