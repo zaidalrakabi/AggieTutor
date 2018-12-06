@@ -24,33 +24,33 @@
                                     <constraint firstAttribute="height" constant="469" id="taT-QF-Q13"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobCell" rowHeight="91" id="c8C-oK-Z1S">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="91"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyJobCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyJobCell" rowHeight="100" id="c8C-oK-Z1S" customClass="MyJobCell" customModule="AggieTutor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c8C-oK-Z1S" id="Ibv-Dv-u6j">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="in-progress-50" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-ih-2wb">
-                                                    <rect key="frame" x="15" y="20" width="51" height="50"/>
+                                                    <rect key="frame" x="15" y="19" width="62" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Student Name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3Q-f7-yT4">
-                                                    <rect key="frame" x="112" y="11" width="150" height="21"/>
+                                                    <rect key="frame" x="129.5" y="10" width="131.5" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvs-cw-HHy">
-                                                    <rect key="frame" x="112" y="35" width="145" height="21"/>
+                                                    <rect key="frame" x="129" y="39" width="126.5" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Status&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBg-pU-p9J">
-                                                    <rect key="frame" x="112" y="59" width="145" height="21"/>
+                                                    <rect key="frame" x="129" y="68" width="145" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -58,8 +58,17 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="Rvs-cw-HHy" id="Zuv-Vx-RET"/>
+                                            <outlet property="name" destination="l3Q-f7-yT4" id="qeY-Cz-DVd"/>
+                                            <outlet property="status" destination="PBg-pU-p9J" id="zqd-bB-d41"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CQb-ac-2yq" id="L3k-ul-yMm"/>
+                                    <outlet property="delegate" destination="CQb-ac-2yq" id="xjP-Yn-Tc0"/>
+                                </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teacher-hiring-100" translatesAutoresizingMaskIntoConstraints="NO" id="NJr-xT-Mlx">
                                 <rect key="frame" x="137" y="69" width="98" height="101"/>
@@ -68,7 +77,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.27183084369999999" blue="0.35441827970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.44803122068459789" green="0.82066941624365486" blue="0.69175628715547788" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eZI-vz-GUe" firstAttribute="trailing" secondItem="NJr-xT-Mlx" secondAttribute="trailing" constant="140" id="00A-6p-hMr"/>
                             <constraint firstItem="NJr-xT-Mlx" firstAttribute="leading" secondItem="eZI-vz-GUe" secondAttribute="leading" constant="137" id="8sq-T3-Lmu"/>
@@ -81,9 +90,6 @@
                         <viewLayoutGuide key="safeArea" id="eZI-vz-GUe"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="Rvs-cw-HHy" id="kOW-4l-bKf"/>
-                        <outlet property="name" destination="l3Q-f7-yT4" id="ZXX-HV-GWu"/>
-                        <outlet property="status" destination="PBg-pU-p9J" id="zbl-se-UbY"/>
                         <outlet property="tableView" destination="m11-Pf-IT4" id="CFc-87-jaX"/>
                     </connections>
                 </viewController>
