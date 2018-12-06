@@ -219,11 +219,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Available Tutors" id="d5M-Rn-ljS">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kJB-3w-9Kp"/>
-                        <barButtonItem key="rightBarButtonItem" title="Jobs" id="pYa-5L-QlB">
-                            <connections>
-                                <action selector="GoToJobs:" destination="tnd-vi-n0n" id="Wem-EW-BDR"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -405,33 +400,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="OyU-c2-yNi">
-                                <rect key="frame" x="0.0" y="64" width="176" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="262" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="MbG-UN-iy5"/>
-                                    <constraint firstAttribute="height" constant="56" id="gUS-Gu-eN6"/>
+                                    <constraint firstAttribute="width" constant="262" id="AR6-Rm-app"/>
+                                    <constraint firstAttribute="height" constant="56" id="SuF-Fe-rco"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="5k7-xu-xgC" id="w3d-9g-cf7"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqt-Gc-SIq">
-                                <rect key="frame" x="182" y="77" width="84" height="30"/>
-                                <color key="backgroundColor" red="0.094377152620000002" green="0.28885647650000001" blue="0.50602734090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="0Jh-9I-jhM"/>
-                                    <constraint firstAttribute="height" constant="30" id="sCV-j3-h2n"/>
-                                </constraints>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-fY-V9P">
-                                <rect key="frame" x="280" y="77" width="85" height="30"/>
+                                <rect key="frame" x="265" y="77" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.094377152620000002" green="0.28885647650000001" blue="0.50602734090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FeR-dA-aKS"/>
-                                </constraints>
                                 <state key="normal" title="+ Request">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -537,28 +518,20 @@
                         <constraints>
                             <constraint firstItem="cwf-J4-Xdt" firstAttribute="trailing" secondItem="gmC-cO-4pd" secondAttribute="trailing" constant="16" id="0U1-Ls-Qrr"/>
                             <constraint firstItem="cwf-J4-Xdt" firstAttribute="bottom" secondItem="gmC-cO-4pd" secondAttribute="bottom" constant="20" id="3v0-9o-do5"/>
-                            <constraint firstItem="pqt-Gc-SIq" firstAttribute="leading" secondItem="OyU-c2-yNi" secondAttribute="trailing" constant="6" id="C7t-F4-Vfh"/>
-                            <constraint firstItem="cwf-J4-Xdt" firstAttribute="trailing" secondItem="6Nx-fY-V9P" secondAttribute="trailing" constant="10" id="IhN-VM-grN"/>
+                            <constraint firstItem="cwf-J4-Xdt" firstAttribute="trailing" secondItem="6Nx-fY-V9P" secondAttribute="trailing" constant="10" id="7Ou-C7-48x"/>
                             <constraint firstItem="gmC-cO-4pd" firstAttribute="top" secondItem="1Ac-Qb-AH8" secondAttribute="bottom" constant="8" id="JZK-8x-geG"/>
                             <constraint firstItem="1Ac-Qb-AH8" firstAttribute="trailing" secondItem="cwf-J4-Xdt" secondAttribute="trailing" id="Sww-Z5-yFp"/>
-                            <constraint firstItem="1Ac-Qb-AH8" firstAttribute="top" secondItem="OyU-c2-yNi" secondAttribute="bottom" id="VvW-yA-bjT"/>
+                            <constraint firstItem="OyU-c2-yNi" firstAttribute="top" secondItem="cwf-J4-Xdt" secondAttribute="top" id="Ykw-CI-scV"/>
+                            <constraint firstItem="6Nx-fY-V9P" firstAttribute="top" secondItem="cwf-J4-Xdt" secondAttribute="top" constant="13" id="aM9-SB-9oZ"/>
                             <constraint firstItem="1Ac-Qb-AH8" firstAttribute="leading" secondItem="cwf-J4-Xdt" secondAttribute="leading" id="b3C-6v-25P"/>
-                            <constraint firstItem="6Nx-fY-V9P" firstAttribute="top" secondItem="cwf-J4-Xdt" secondAttribute="top" constant="13" id="b7m-OK-sfJ"/>
                             <constraint firstItem="gmC-cO-4pd" firstAttribute="leading" secondItem="cwf-J4-Xdt" secondAttribute="leading" constant="16" id="gcI-Xj-qUT"/>
-                            <constraint firstItem="OyU-c2-yNi" firstAttribute="leading" secondItem="cwf-J4-Xdt" secondAttribute="leading" id="h85-Ve-J1e"/>
-                            <constraint firstItem="OyU-c2-yNi" firstAttribute="top" secondItem="cwf-J4-Xdt" secondAttribute="top" id="pTv-Sw-jNC"/>
-                            <constraint firstItem="pqt-Gc-SIq" firstAttribute="top" secondItem="cwf-J4-Xdt" secondAttribute="top" constant="13" id="yDN-Vc-ssT"/>
-                            <constraint firstItem="6Nx-fY-V9P" firstAttribute="leading" secondItem="pqt-Gc-SIq" secondAttribute="trailing" constant="14" id="yDh-9J-yFn"/>
+                            <constraint firstItem="OyU-c2-yNi" firstAttribute="leading" secondItem="cwf-J4-Xdt" secondAttribute="leading" id="kS1-xl-fKE"/>
+                            <constraint firstItem="1Ac-Qb-AH8" firstAttribute="top" secondItem="6Nx-fY-V9P" secondAttribute="bottom" constant="13" id="m9K-nr-TAk"/>
+                            <constraint firstItem="6Nx-fY-V9P" firstAttribute="leading" secondItem="OyU-c2-yNi" secondAttribute="trailing" constant="3" id="trZ-oy-R9D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cwf-J4-Xdt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Jobs Available" id="7QY-Um-HfR">
-                        <barButtonItem key="rightBarButtonItem" title="Tutors" id="FvV-oe-G6J">
-                            <connections>
-                                <action selector="GoToTutors:" destination="5k7-xu-xgC" id="Iao-bg-6x2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Jobs Available" id="7QY-Um-HfR"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="searchBar" destination="OyU-c2-yNi" id="8DP-Rq-XYN"/>
@@ -567,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hk-dQ-jXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="-45"/>
+            <point key="canvasLocation" x="1316" y="-45.42728635682159"/>
         </scene>
     </scenes>
     <resources>
