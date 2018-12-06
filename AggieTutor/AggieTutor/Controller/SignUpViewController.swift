@@ -7,17 +7,20 @@
 //
 import Foundation
 import UIKit
-import  Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var errorLabel: UILabel!
+    
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     
         self.hideKeyboardWhenTappedAround()
@@ -41,8 +44,19 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 self.handleError(error!)      // use the handleError method
             } else {
                 print("Sign up successfully")
+                DispatchQueue.main.async {
+                    let uID = Auth.auth().currentUser!.uid
+                    self.ref.child("users").child(uID).setValue([
+                        "username" : self.usernameField.text!,
+                        "hourly_rate": 0,
+                        "name": "NOT_SET"
+                        ])
+                }
                 self.performSegue(withIdentifier: "toMainController", sender: self)
             }
+         
+                
+            
         }
     }
     func handleError(_ error: Error) {

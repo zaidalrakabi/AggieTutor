@@ -17,6 +17,7 @@ class TutorsViewController: UIViewController {
     var datebaseHandle: DatabaseHandle!
     var tutors = [Tutor]()
     var curTutors = [Tutor]()
+    var loaded = false;
     
     
     @IBAction func GoToJobs(_ sender: Any) {
@@ -25,25 +26,37 @@ class TutorsViewController: UIViewController {
         self.navigationController?.pushViewController(JobsVC, animated: true)
     }
     
+    @IBAction func showNearMe(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "JobsTutors", bundle: nil)
+        let MapVC = storyboard.instantiateViewController(withIdentifier: "MapVC") as! MapViewController
+        MapVC.curTutors = self.curTutors
+        self.navigationController?.pushViewController(MapVC, animated: true)
+    }
     func getTutors(){
         databaseRefer = Database.database().reference()
+       
         let query = self.databaseRefer.child("users").queryOrdered(byChild: "tutor").queryEqual(toValue: true)
         query.observe(.value, with: { DataSnapshot in
+            if(!self.tutors.isEmpty){
+                print("Not empty")
+                self.tutors.removeAll()
+            }
             for child in DataSnapshot.children {
                 let tutor = child as! DataSnapshot
                 self.tutors.append(Tutor(tutor: tutor))
             }
-                DispatchQueue.main.async{
-                self.curTutors = self.tutors
-                self.tableView.reloadData()
-            }
+            self.curTutors = self.tutors
+            print(">>>>>>>>>>>>>>>>>Reloading tableView<<<<<<<<<<<<<<<")
+            self.tableView.reloadData()
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        getTutors()
+        if(!loaded){
+            getTutors()
+            loaded = true
+        }
         print("finished loading")
         // Do any additional setup after loading the view.
     }

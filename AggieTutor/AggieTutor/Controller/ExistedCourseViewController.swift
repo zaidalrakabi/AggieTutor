@@ -10,6 +10,9 @@ import UIKit
 
 class ExistedCourseViewController: UIViewController {
 
+    
+    var inputData = Course()
+    
     @IBOutlet weak var course: UITextField!
     @IBOutlet weak var quarterCompleted: UITextField!
     @IBOutlet weak var professor: UITextField!
@@ -17,10 +20,14 @@ class ExistedCourseViewController: UIViewController {
     @IBOutlet weak var reasons: UITextField!
     @IBOutlet weak var hourrate: UITextField!
     
-    var courseIndex: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        course.text = inputData.course_name
+        quarterCompleted.text = inputData.quarter
+        professor.text = inputData.instructor
+        grade.text = inputData.grade
+        reasons.text = inputData.reason
+        hourrate.text = String(inputData.hourly_wage)
     }
 
 }
