@@ -20,21 +20,20 @@ class MyJobsViewController: UIViewController {
     
     func getStudents(){
         databaseRefer = Database.database().reference()
-        let q1 = self.databaseRefer.child("users")
-        let query = q1.child("students")
-        
+        let uID = Auth.auth().currentUser!.uid
+        let query = self.databaseRefer.child("users/\(uID)/Jobs/students")
         query.observe(.value, with: { (snapshot) in
-            print(snapshot.value ?? "nothing")
+            //print(snapshot.value ?? "nothing")
             
             if(!self.jobs.isEmpty){
                 self.jobs.removeAll()
             }
             
+            
             for child in snapshot.children{
                 let job = child as! DataSnapshot
                 self.jobs.append(Jobs(job: job))
                 print("<<<<<Printing Job>>>>>>")
-                print("\(job)")
             }
             
             DispatchQueue.main.async {
