@@ -31,7 +31,7 @@ class TutorCellDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         setName.text = name
         sethourlyRate.text = hourlyRate
         setclassTeaching.text = classTeaching

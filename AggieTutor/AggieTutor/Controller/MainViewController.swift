@@ -41,6 +41,7 @@ override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.hidesBackButton = true
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
