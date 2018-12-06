@@ -51,6 +51,7 @@ class JobsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         getJobs()
     }
 }

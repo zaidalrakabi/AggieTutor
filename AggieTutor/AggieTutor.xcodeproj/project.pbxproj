@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04197BA121B39D4500B79C02 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04197BA021B39D4500B79C02 /* Tutor.swift */; };
+		041D423121B9C04D00DBFA55 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D423021B9C04D00DBFA55 /* CustomNavController.swift */; };
 		042264C121AF07E600038316 /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042264C021AF07E600038316 /* StudentDetailsViewController.swift */; };
 		0467B73B21AF578100F84151 /* ExistedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */; };
 		0467B74721AF57A900F84151 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		04197BA021B39D4500B79C02 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
+		041D423021B9C04D00DBFA55 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		042264C021AF07E600038316 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentDetailsViewController.swift; path = AggieTutor/Controller/StudentDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		0467B73A21AF578100F84151 /* ExistedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistedCourseViewController.swift; sourceTree = "<group>"; };
 		0467B73C21AF57A800F84151 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				E054FCD7219DF277009E0628 /* MainViewController.swift */,
+				041D423021B9C04D00DBFA55 /* CustomNavController.swift */,
 				0467B74021AF57A800F84151 /* AddCourseViewController.swift */,
 				0467B74321AF57A900F84151 /* InitialViewController.swift */,
 				0467B74121AF57A900F84151 /* LoginViewController.swift */,
@@ -351,6 +354,7 @@
 				04197BA121B39D4500B79C02 /* Tutor.swift in Sources */,
 				0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */,
 				0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */,
+				041D423121B9C04D00DBFA55 /* CustomNavController.swift in Sources */,
 				E06DD1B421B6587400C6AE6B /* Jobs.swift in Sources */,
 				0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */,
 				0497E74B21A5F4A000D3A736 /* JobsViewController.swift in Sources */,
