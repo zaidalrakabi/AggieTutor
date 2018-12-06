@@ -28,6 +28,8 @@
 		E054FCDD219DF278009E0628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDC219DF278009E0628 /* Assets.xcassets */; };
 		E054FCE0219DF278009E0628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E054FCDE219DF278009E0628 /* LaunchScreen.storyboard */; };
 		E06DD1B421B6587400C6AE6B /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD1B321B6587400C6AE6B /* Jobs.swift */; };
+		E06DD1B621B9B6D600C6AE6B /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD1B521B9B6D600C6AE6B /* RequestViewController.swift */; };
+		E06DD1B821B9C35100C6AE6B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06DD1B721B9C35100C6AE6B /* Request.swift */; };
 		E0700E0621B3476300C89B34 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */; };
 		E0700E0821B34AF700C89B34 /* MyJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */; };
 		E0700E0A21B34B2200C89B34 /* MyJobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0700E0921B34B2200C89B34 /* MyJobs.storyboard */; };
@@ -72,6 +74,8 @@
 		E054FCDF219DF278009E0628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E054FCE1219DF278009E0628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E06DD1B321B6587400C6AE6B /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		E06DD1B521B9B6D600C6AE6B /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		E06DD1B721B9C35100C6AE6B /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E0700E0521B3476300C89B34 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJobsViewController.swift; sourceTree = "<group>"; };
 		E0700E0921B34B2200C89B34 /* MyJobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyJobs.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				ED66CF0621B4945600CA2C4C /* Course.swift */,
 				04197BA021B39D4500B79C02 /* Tutor.swift */,
 				E06DD1B321B6587400C6AE6B /* Jobs.swift */,
+				E06DD1B721B9C35100C6AE6B /* Request.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				E0700E0721B34AF700C89B34 /* MyJobsViewController.swift */,
 				E0700E0B21B355B800C89B34 /* ProfileViewController.swift */,
 				E0700E0D21B4AF3C00C89B34 /* TutorCellDetailViewController.swift */,
+				E06DD1B521B9B6D600C6AE6B /* RequestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,7 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04197BA121B39D4500B79C02 /* Tutor.swift in Sources */,
+				E06DD1B821B9C35100C6AE6B /* Request.swift in Sources */,
 				0467B74C21AF57A900F84151 /* LoginViewController.swift in Sources */,
+				E06DD1B621B9B6D600C6AE6B /* RequestViewController.swift in Sources */,
 				0467B74E21AF57A900F84151 /* InitialViewController.swift in Sources */,
 				E06DD1B421B6587400C6AE6B /* Jobs.swift in Sources */,
 				0467B74A21AF57A900F84151 /* TutorDashboardViewController.swift in Sources */,
