@@ -81,9 +81,9 @@
                         <viewLayoutGuide key="safeArea" id="eZI-vz-GUe"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="Rvs-cw-HHy" id="kOW-4l-bKf"/>
-                        <outlet property="name" destination="l3Q-f7-yT4" id="ZXX-HV-GWu"/>
-                        <outlet property="status" destination="PBg-pU-p9J" id="zbl-se-UbY"/>
+                        <outlet property="email" destination="Rvs-cw-HHy" id="0cY-ja-oXI"/>
+                        <outlet property="name" destination="l3Q-f7-yT4" id="8V3-ii-T7l"/>
+                        <outlet property="status" destination="PBg-pU-p9J" id="ZX1-AV-0wc"/>
                         <outlet property="tableView" destination="m11-Pf-IT4" id="CFc-87-jaX"/>
                     </connections>
                 </viewController>
