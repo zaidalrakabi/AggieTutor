@@ -14,6 +14,7 @@ class CustomNavController: UINavigationController {
         super.viewDidLoad()
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         // Do any additional setup after loading the view.
     }
     

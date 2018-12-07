@@ -53,14 +53,16 @@ class TutorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TextField Color Customization
+        
         searchBar.tintColor = .white
         view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
+        self.hideKeyboardWhenTappedAround()
         if(!loaded){
             getTutors()
             loaded = true
         }
         print("finished loading")
+        
         // Do any additional setup after loading the view.
     }
 }
@@ -98,7 +100,6 @@ extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TutorCell") as! TutorCell
         cell.navigationController = self.navigationController;
         cell.setTutor(tutor: tutor)
-        
         return cell
     }
     
@@ -107,7 +108,6 @@ extension TutorsViewController: UITableViewDataSource, UITableViewDelegate {
 class TutorCell: UITableViewCell{
     @IBOutlet weak var TutorNameLabel: UILabel!
     @IBOutlet weak var RateLabel: UILabel!
-    @IBOutlet weak var QualificationsLabel: UILabel!
     @IBOutlet weak var ClassLabel: UILabel!
     var navigationController:UINavigationController! = nil
     
@@ -117,8 +117,7 @@ class TutorCell: UITableViewCell{
         VC.name = TutorNameLabel.text
         VC.hourlyRate = RateLabel.text
         VC.classTeaching = ClassLabel.text
-        VC.qualifications = QualificationsLabel.text
-        
+        VC.qualifications = "I can teach, and I am broke?"
         self.navigationController.pushViewController(VC, animated: true)
         
     }
@@ -130,13 +129,6 @@ class TutorCell: UITableViewCell{
         let rate = tutor.hourly_wage
         RateLabel.text = "Hourly Rate: $\(rate)"
         //Get Qualification
-        let isTA = tutor.TA
-        var TA = "No"
-        if (isTA) {
-            TA = "Yes"
-        }
-        let grade = tutor.grade
-        QualificationsLabel.text = "Grade: \(grade),   TA: \(TA)"
     }
     
 }

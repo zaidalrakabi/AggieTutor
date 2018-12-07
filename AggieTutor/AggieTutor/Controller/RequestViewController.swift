@@ -50,6 +50,8 @@ class RequestViewController: UIViewController {
         tableView.rowHeight = 100
         getRequest()
         print("done loading")
+        
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         // Do any additional setup after loading the view.
     }
 

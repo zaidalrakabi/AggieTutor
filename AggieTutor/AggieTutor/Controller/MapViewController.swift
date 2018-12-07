@@ -46,11 +46,26 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     //let centerLocation = CLLocation(latitude: 38.539719, longitude: -121.749516)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: "blue") as Any]
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "blue")
+        // TextField Color Customization
+        
         mapView.showsUserLocation = true
         for tutor in curTutors{
             self.mapView.addAnnotation(TutorAnnotation(tutor: tutor, nav: self.navigationController!))
         }
         mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
+    override func willMove(toParent parent: UIViewController?) {
+        if parent == nil
+        {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+            self.navigationController?.navigationBar.tintColor = .white
+        }
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

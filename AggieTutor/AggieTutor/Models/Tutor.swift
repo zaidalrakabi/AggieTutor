@@ -17,6 +17,7 @@ class Tutor {
     var TA = false
     var lat:Double = 0
     var long:Double = 0
+    var qual = "I am just good at teaching"
     init(tutor: DataSnapshot) {
         let td = tutor.value as? [String: Any] ?? [:]
         self.name = td["name"] as? String ?? ""
