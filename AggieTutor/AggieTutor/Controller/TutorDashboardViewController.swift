@@ -19,7 +19,7 @@ class TutorDashboardViewController: UICollectionViewController {
     
     struct Storyboard {
         static let courseCell = "courseCell"
-        static let leftAndRightPaddings: CGFloat = 2.0
+        static let leftAndRightPaddings: CGFloat = 5.0
         static let numberOfItemsPerRow: CGFloat = 3.0
         static let showDetailVC = "ShowCourseDetails"
     }
@@ -47,16 +47,20 @@ class TutorDashboardViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         // change the layout of the collection view
         let collectionViewWidth = collectionView?.frame.width
         let itemWidth = (collectionViewWidth! - Storyboard.leftAndRightPaddings) / Storyboard.numberOfItemsPerRow
         
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        
         navigationItem.rightBarButtonItems?.append(editButtonItem)
         
         getCourses()
         print("done loading")
+        
+        
     }
     
     // MARK: - number of courses
@@ -70,6 +74,7 @@ class TutorDashboardViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.courseCell, for: indexPath) as! CourseCell
         
         cell.courseName.text! = courses[indexPath.item].course_name
+        cell.deleteButtonBackgroundView.isHidden = true
         return cell
     }
     

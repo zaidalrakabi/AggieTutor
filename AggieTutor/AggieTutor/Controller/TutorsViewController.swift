@@ -57,11 +57,13 @@ class TutorsViewController: UIViewController {
         
         searchBar.tintColor = .white
         view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
+        self.hideKeyboardWhenTappedAround()
         if(!loaded){
             getTutors()
             loaded = true
         }
         print("finished loading")
+        
         // Do any additional setup after loading the view.
     }
 }
