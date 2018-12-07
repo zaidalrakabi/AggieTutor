@@ -12,7 +12,6 @@
         <!--Aggie Tutor Map-->
         <scene sceneID="opu-A6-ppA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uy-0C-rN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MapVC" title="Aggie Tutor Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ke2-Qy-jty" customClass="MapViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t7A-D3-PYG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -39,6 +38,7 @@
                         <outlet property="mapView" destination="gh0-J9-7Jf" id="7So-PE-V5m"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uy-0C-rN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362" y="-806"/>
         </scene>
@@ -301,7 +301,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-cK-e14">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-cK-e14">
                                 <rect key="frame" x="16" y="300" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3KT-KG-4gU"/>
@@ -310,7 +310,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-kd-TU7">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-kd-TU7">
                                 <rect key="frame" x="16" y="379" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="B58-l2-yKH"/>
@@ -319,7 +319,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-xR-GsO">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-xR-GsO">
                                 <rect key="frame" x="16" y="458" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ezZ-XM-AJd"/>
@@ -328,7 +328,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53G-eu-fjA">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53G-eu-fjA">
                                 <rect key="frame" x="16" y="531" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fPr-sI-OOv"/>
@@ -572,6 +572,6 @@
     </scenes>
     <resources>
         <image name="INeedATutor" width="1000" height="1080"/>
-        <image name="IWantToTutor" width="2480" height="2480"/>
+        <image name="IWantToTutor" width="595.20001220703125" height="595.20001220703125"/>
     </resources>
 </document>
