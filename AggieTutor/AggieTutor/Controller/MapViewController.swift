@@ -32,7 +32,7 @@ class TutorAnnotation:MKPointAnnotation{
         vc.name = tutor.name
         vc.hourlyRate = "\(tutor.hourly_wage)"
         vc.classTeaching = tutor.teaching
-        vc.qualifications = tutor.grade
+        vc.qualifications = tutor.qual
         navigationController.pushViewController(vc, animated: true)
     }
 }

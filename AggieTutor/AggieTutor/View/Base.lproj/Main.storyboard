@@ -300,46 +300,46 @@
                                 <rect key="frame" x="36" y="152" width="342" height="350"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-RZ-DY1">
-                                        <rect key="frame" x="12" y="149.5" width="318" height="1"/>
+                                        <rect key="frame" x="12" y="150" width="318" height="1"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aQD-aJ-hf6"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bW-W0-Rsu">
-                                        <rect key="frame" x="135.5" y="24" width="71.5" height="33"/>
+                                        <rect key="frame" x="135" y="24" width="72" height="33"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tON-AR-TzZ">
-                                        <rect key="frame" x="12" y="85" width="46" height="18.5"/>
+                                        <rect key="frame" x="12" y="85" width="46" height="19"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrR-cb-f0D" userLabel="Email Field">
-                                        <rect key="frame" x="8" y="111.5" width="322" height="30"/>
+                                        <rect key="frame" x="8" y="112" width="322" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caM-hY-Nw2">
-                                        <rect key="frame" x="14" y="166.5" width="78" height="18.5"/>
+                                        <rect key="frame" x="14" y="167" width="78" height="19"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36i-2C-e2t" userLabel="Password Field">
-                                        <rect key="frame" x="12" y="197" width="318" height="30"/>
+                                        <rect key="frame" x="12" y="198" width="318" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahb-kV-zza">
-                                        <rect key="frame" x="12" y="231" width="318" height="1"/>
+                                        <rect key="frame" x="12" y="232" width="318" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="y90-x9-xPu"/>
                                         </constraints>
@@ -347,8 +347,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-5X-BLj" userLabel="errorLabel">
                                         <rect key="frame" x="71" y="276" width="200" height="23"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="7dU-iH-yD9"/>
-                                            <constraint firstAttribute="width" constant="200" id="bIe-ev-Awg"/>
+                                            <constraint firstAttribute="height" constant="23" id="ala-i3-Qkx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -357,24 +356,25 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2bW-W0-Rsu" firstAttribute="top" secondItem="t5Q-oI-sfk" secondAttribute="top" constant="24" id="6BR-G0-NHt"/>
+                                    <constraint firstItem="GPA-5X-BLj" firstAttribute="top" secondItem="Ahb-kV-zza" secondAttribute="bottom" constant="43" id="Afi-Or-snS"/>
                                     <constraint firstItem="Ahb-kV-zza" firstAttribute="centerX" secondItem="36i-2C-e2t" secondAttribute="centerX" id="CqM-ly-ZDO"/>
                                     <constraint firstItem="36i-2C-e2t" firstAttribute="top" secondItem="caM-hY-Nw2" secondAttribute="bottom" constant="12" id="DGz-Sp-uU4"/>
                                     <constraint firstItem="Xpc-RZ-DY1" firstAttribute="centerX" secondItem="jrR-cb-f0D" secondAttribute="centerX" constant="2" id="DXv-3c-Xb0"/>
                                     <constraint firstItem="caM-hY-Nw2" firstAttribute="top" secondItem="Xpc-RZ-DY1" secondAttribute="bottom" constant="16" id="GBa-5a-oqy"/>
                                     <constraint firstItem="Xpc-RZ-DY1" firstAttribute="top" secondItem="jrR-cb-f0D" secondAttribute="bottom" constant="8" id="IWO-YW-aJC"/>
-                                    <constraint firstItem="GPA-5X-BLj" firstAttribute="top" secondItem="Ahb-kV-zza" secondAttribute="bottom" constant="44" id="Ikb-UM-RsF"/>
                                     <constraint firstItem="Ahb-kV-zza" firstAttribute="width" secondItem="36i-2C-e2t" secondAttribute="width" id="K3m-9H-rB5"/>
                                     <constraint firstAttribute="trailing" secondItem="36i-2C-e2t" secondAttribute="trailing" constant="12" id="O9k-tu-sHX"/>
+                                    <constraint firstItem="GPA-5X-BLj" firstAttribute="leading" secondItem="t5Q-oI-sfk" secondAttribute="leading" constant="71" id="Q4j-P0-Rqe"/>
                                     <constraint firstItem="36i-2C-e2t" firstAttribute="leading" secondItem="t5Q-oI-sfk" secondAttribute="leading" constant="12" id="Qms-6V-t9w"/>
                                     <constraint firstAttribute="trailing" secondItem="jrR-cb-f0D" secondAttribute="trailing" constant="12" id="T49-as-rwo"/>
                                     <constraint firstItem="jrR-cb-f0D" firstAttribute="top" secondItem="tON-AR-TzZ" secondAttribute="bottom" constant="8" id="UN7-ZY-Wnf"/>
                                     <constraint firstItem="tON-AR-TzZ" firstAttribute="leading" secondItem="t5Q-oI-sfk" secondAttribute="leading" constant="12" id="Wey-vj-mrO"/>
                                     <constraint firstItem="jrR-cb-f0D" firstAttribute="leading" secondItem="t5Q-oI-sfk" secondAttribute="leading" constant="8" id="YCJ-5X-dJD"/>
-                                    <constraint firstItem="GPA-5X-BLj" firstAttribute="centerX" secondItem="t5Q-oI-sfk" secondAttribute="centerX" id="ZuZ-aC-YVp"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tON-AR-TzZ" secondAttribute="trailing" constant="20" symbolic="YES" id="dM9-Nk-djh"/>
                                     <constraint firstItem="tON-AR-TzZ" firstAttribute="top" secondItem="2bW-W0-Rsu" secondAttribute="bottom" constant="28" id="ehe-mA-TOz"/>
                                     <constraint firstItem="Ahb-kV-zza" firstAttribute="top" secondItem="36i-2C-e2t" secondAttribute="bottom" constant="4" id="hRG-UR-zan"/>
                                     <constraint firstItem="caM-hY-Nw2" firstAttribute="leading" secondItem="t5Q-oI-sfk" secondAttribute="leading" constant="14" id="lRm-Of-CKC"/>
+                                    <constraint firstAttribute="trailing" secondItem="GPA-5X-BLj" secondAttribute="trailing" constant="71" id="nbq-LG-a0P"/>
                                     <constraint firstItem="Xpc-RZ-DY1" firstAttribute="width" secondItem="jrR-cb-f0D" secondAttribute="width" constant="-4" id="uXq-sX-VoT"/>
                                     <constraint firstItem="2bW-W0-Rsu" firstAttribute="centerX" secondItem="t5Q-oI-sfk" secondAttribute="centerX" id="xKc-WJ-696"/>
                                     <constraint firstAttribute="height" constant="350" id="xqq-ho-0dr"/>
