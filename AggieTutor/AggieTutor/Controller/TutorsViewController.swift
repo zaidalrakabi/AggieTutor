@@ -54,7 +54,6 @@ class TutorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // TextField Color Customization
-        searchBar.
         searchBar.tintColor = .white
         view.addVerticalGradientLayer(topColor: secondaryColor, bottomColor: primaryColor)
         if(!loaded){
