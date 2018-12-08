@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  AggieTutor
 //
-//  Created by doMore on 11/21/18.
+//  Created by DollyYe on 11/21/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    // Firebase authentication
     @IBAction func LogIn(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { user, error in
             if error != nil{
@@ -30,9 +31,9 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
             }
         }
     }
+    // display error message
     func handleError(_ error: Error) {
         if let errorCode = AuthErrorCode(rawValue: error._code) {
-            // now you can use the .errorMessage var to get your custom error message
             print(errorCode.errorMessage)
             self.errorLabel.text = errorCode.errorMessage
         }
@@ -53,18 +54,6 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 
     }
 
-    
-    /**
-     Adjusts the center of the **continueButton** above the keyboard.
-     - Parameter notification: Contains the keyboardFrame info.
-     */
-    
-    
-   
-    
-    
-    
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
             return .lightContent

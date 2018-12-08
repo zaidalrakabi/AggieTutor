@@ -2,19 +2,20 @@
 //  MenuViewController.swift
 //  AggieTutor
 //
-//  Created by doMore on 11/21/18.
+//  Created by DollyYe on 11/21/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 
 import UIKit
 import Firebase
-
+// A screen displaying two options: Log in / Sign up
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // If the user is previously logged in, then skip menu screen and go to home screen.
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: "toHomeScreen", sender: self)
         }
@@ -23,7 +24,7 @@ class MenuViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated);
@@ -48,8 +49,5 @@ class MenuViewController: UIViewController {
             return .lightContent
         }
     }
-    
-    
-    
 }
 

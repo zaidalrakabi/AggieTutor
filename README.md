@@ -1,5 +1,8 @@
 # Aggie Tutor iOS app 
 
+Contribution:
+Dolly Ye: Created logo, launch screen, InitialViewController, MenuViewController,LoginViewController and SignUpViewController. InitialViewController allows users to skip the menu screen and jump to the dashboard if the user has previously logged in. MenuViewController lets users to either log in or sign up. SignUpViewController records the users' info into the Firebase.LoginViewController uses Firebase to authenticate user account. Set the UI (gradient blue) for the whole app.
+
 ### Student User Flow
 *Are you confused in class? Pull out your phone and locate a verified tutor near you. View her qualifications, price and hours.*
 

@@ -2,7 +2,7 @@
 //  InitialViewController.swift
 //  AggieTutor
 //
-//  Created by doMore on 11/21/18.
+//  Created by DollyYe on 11/21/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 
@@ -24,7 +24,7 @@ class InitialViewController: UIViewController {
             self.performSegue(withIdentifier: "toHomeScreen", sender: self)
         }
         
-        //- Todo: Check if user is authenticated. If so, segue to the HomeViewController, otherwise, segue to the MenuViewController
+        //Check if user is authenticated. If so, segue to the HomeViewController, otherwise, segue to the MenuViewController
         else {
             self.performSegue(withIdentifier: "toMenuScreen", sender: self)
         }

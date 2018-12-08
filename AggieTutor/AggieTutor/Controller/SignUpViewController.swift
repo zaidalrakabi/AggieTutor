@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  AggieTutor
 //
-//  Created by doMore on 11/21/18.
+//  Created by DollyYe on 11/21/18.
 //  Copyright © 2018 Aggie Tutor. All rights reserved.
 //
 import Foundation
@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Initiate firebase
         ref = Database.database().reference()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     
@@ -34,14 +35,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    // Sign up: save user name, email, password to Firebase
     @IBAction func SignUp(_ sender: Any) {
-        
         Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) {
             (user, error) in
             if error != nil {
                 print(error!)
-                self.handleError(error!)      // use the handleError method
+                self.handleError(error!)
             } else {
                 print("Sign up successfully")
                 DispatchQueue.main.async {
@@ -61,7 +61,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     func handleError(_ error: Error) {
         if let errorCode = AuthErrorCode(rawValue: error._code) {
-            // now you can use the .errorMessage var to get your custom error message
+    
             print(errorCode.errorMessage)
             self.errorLabel.text = errorCode.errorMessage
         }
