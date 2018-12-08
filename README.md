@@ -1,8 +1,10 @@
 # Aggie Tutor iOS app 
 
-Individual Contribution:
+### [Aggie Tutor website](https://ecs189e.github.io/AggieTutor/)
+Individual Contributions:
 
 - Dolly Ye: Created logo, launch screen, InitialViewController, MenuViewController,LoginViewController and SignUpViewController. InitialViewController allows users to skip the menu screen and jump to the dashboard if the user has previously logged in. MenuViewController lets users to either log in or sign up. SignUpViewController records the users' info into the Firebase.LoginViewController uses Firebase to authenticate user account. Set the UI (gradient blue) for the whole app.
+- Zaid Al Rakabi: I managed the overall flow, features, and transitions of the app. In addition I implemented the Side Menu for easier navigation. I added My Profile, My Request, and My Jobs View Controllers to display User information and get data from Firebase. I also contributed to Available tutor's VC by adding the Tutor Detail View contoller.
 
 ### Student User Flow
 *Are you confused in class? Pull out your phone and locate a verified tutor near you. View her qualifications, price and hours.*
@@ -23,7 +25,7 @@ Individual Contribution:
 
 | Zaid Al Rakabi | Jose Solorio Ramirez | Ruolan Zeng | Dolly Ye|
 |--------|--------|--------|--------|
-| ![](https://avatars1.githubusercontent.com/u/11766372?s=100&v=3)|![](https://avatars1.githubusercontent.com/u/17058366?s=100&v=4)       | ![](https://avatars2.githubusercontent.com/u/37227883?s=100&v=4)| ![](https://avatars3.githubusercontent.com/u/18589970?s=150&v=4)
+| ![](https://avatars1.githubusercontent.com/u/11766372?s=100&v=3)|![](https://avatars1.githubusercontent.com/u/17058366?s=100&v=4)       | ![](https://avatars2.githubusercontent.com/u/37227883?s=100&v=4)| ![](https://avatars3.githubusercontent.com/u/18589970?s=100&v=4)
 | [zaidalrakabi](https://github.com/zaidalrakabi)|[joselsoloriojr](https://github.com/joselsoloriojr)|[SeverusTseng](https://github.com/SeverusTseng)| [okdolly](https://github.com/okdolly)
 
 ## Trello Board:
