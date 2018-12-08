@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l94-Ra-eYm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l94-Ra-eYm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="-1783.2" y="158.77061469265368"/>
         </scene>
-        <!--My Tutor Profile-->
+        <!--Profile-->
         <scene sceneID="tZv-bF-zeq">
             <objects>
                 <viewController storyboardIdentifier="TutorProfileVC" id="R3H-ti-atV" customClass="TutorProfileViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
@@ -309,7 +309,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RZv-ng-xK7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Tutor Profile" id="KH9-xV-zRp"/>
+                    <navigationItem key="navigationItem" title="Profile" id="KH9-xV-zRp" userLabel="My Profile"/>
                     <connections>
                         <outlet property="GPA" destination="wwC-Zp-wEZ" id="mex-Ee-Qte"/>
                         <outlet property="language" destination="nWf-ea-wkc" id="Ep1-9z-6pK"/>
@@ -322,7 +322,7 @@
             </objects>
             <point key="canvasLocation" x="-850.39999999999998" y="158.77061469265368"/>
         </scene>
-        <!--My Tutor Dashboard-->
+        <!--Courses-->
         <scene sceneID="skg-G1-pXb">
             <objects>
                 <collectionViewController id="yrc-ba-ikW" customClass="TutorDashboardViewController" customModule="AggieTutor" customModuleProvider="target" sceneMemberID="viewController">
@@ -395,7 +395,7 @@
                             <outlet property="delegate" destination="yrc-ba-ikW" id="Qel-GQ-mAq"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="My Tutor Dashboard" id="Vaz-Y0-1H6">
+                    <navigationItem key="navigationItem" title="Courses" id="Vaz-Y0-1H6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8IV-6S-dxa">
                             <connections>
                                 <segue destination="IaW-G5-qtn" kind="show" id="Ero-U7-6sS"/>
@@ -951,7 +951,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backArrow" width="50" height="50"/>
+        <image name="backArrow" width="25" height="25"/>
         <image name="profile" width="128" height="128"/>
     </resources>
 </document>
