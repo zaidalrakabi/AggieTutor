@@ -1,6 +1,14 @@
 # Aggie Tutor iOS app 
 
 ### [Aggie Tutor website](https://ecs189e.github.io/AggieTutor/)
+
+## Creators:
+
+| Zaid Al Rakabi | Jose Solorio Ramirez | Ruolan Zeng | Dolly Ye|
+|--------|--------|--------|--------|
+| ![](https://avatars1.githubusercontent.com/u/11766372?s=100&v=3)|![](https://avatars1.githubusercontent.com/u/17058366?s=100&v=4)       | ![](https://avatars2.githubusercontent.com/u/37227883?s=100&v=4)| ![](https://avatars3.githubusercontent.com/u/18589970?s=100&v=4)
+| [zaidalrakabi](https://github.com/zaidalrakabi)|[joselsoloriojr](https://github.com/joselsoloriojr)|[SeverusTseng](https://github.com/SeverusTseng)| [okdolly](https://github.com/okdolly)
+
 Individual Contributions:
 
 - Dolly Ye: Created logo, launch screen, InitialViewController, MenuViewController,LoginViewController and SignUpViewController. InitialViewController allows users to skip the menu screen and jump to the dashboard if the user has previously logged in. MenuViewController lets users to either log in or sign up. SignUpViewController records the users' info into the Firebase.LoginViewController uses Firebase to authenticate user account. Set the UI (gradient blue) for the whole app.
@@ -20,13 +28,6 @@ Individual Contributions:
 
 ![ezgif com-resize 1](https://user-images.githubusercontent.com/18589970/49683714-2b0e9780-fa7e-11e8-92c0-7de3e87e87df.gif)
 
-
-## Creators:
-
-| Zaid Al Rakabi | Jose Solorio Ramirez | Ruolan Zeng | Dolly Ye|
-|--------|--------|--------|--------|
-| ![](https://avatars1.githubusercontent.com/u/11766372?s=100&v=3)|![](https://avatars1.githubusercontent.com/u/17058366?s=100&v=4)       | ![](https://avatars2.githubusercontent.com/u/37227883?s=100&v=4)| ![](https://avatars3.githubusercontent.com/u/18589970?s=100&v=4)
-| [zaidalrakabi](https://github.com/zaidalrakabi)|[joselsoloriojr](https://github.com/joselsoloriojr)|[SeverusTseng](https://github.com/SeverusTseng)| [okdolly](https://github.com/okdolly)
 
 ## Trello Board:
 * [aggie-tutor-app](https://trello.com/b/au6ICKVT/aggie-tutor-app)
